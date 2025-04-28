@@ -1,1 +1,10 @@
-ㅇㅇ
+	PLMG96N58S
+
+https://www.consumer.go.kr/openapi/recall/contents/index.do?serviceKey=PLMG96N58S&pageNo=1&cntPerPage=10cntntsId=0301
+
+PLMG96N58S
+
+0301 자동차 
+
+ https://www.consumer.go.kr/openapi/recall/contents/index.do?serviceKey=PLMG96N58S
+&pageNo=1&cntPerPage=10&cntntsId=0301
