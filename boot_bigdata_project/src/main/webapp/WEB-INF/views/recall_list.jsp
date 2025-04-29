@@ -36,6 +36,34 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <style>
+  .table-custom {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    text-align: center;
+    background-color: #ffffff;
+  }
+
+  .table-custom th, .table-custom td {
+    padding: 12px 15px;
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 60%);
+  }
+
+  .table-custom th {
+    background-color: color-mix(in srgb, var(--default-color), transparent 80%);
+    font-weight: bold;
+    color: #333;
+  }
+
+  .table-custom tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  .table-custom tr:hover {
+    background-color: #f1f1f1;
+  }
+  </style>
   <script src="${pageContext.request.contextPath}/js/jquery.js"></script>
   <script>
 	  $(document).on("click", ".paginate_button a", function(e) {
@@ -142,7 +170,7 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>전국 리콜 현황 전체보기</h2>
+        <h2 class="title">전국 리콜 현황 전체보기</h2>
 		
 		<div class="widgets-container">
 			
@@ -151,8 +179,7 @@
 			    <input type="hidden" name="pageNum" value="${pageMaker.cri.pageNum}">
 			    <input type="hidden" name="amount" value="${pageMaker.cri.amount}">
 			</form>
-			
-			<table border="1" style="border-collapse:collapse;">
+			<table class="table-custom">
 			    <tr>
 			        <th>제품명</th>
 			        <th>제조사</th>
