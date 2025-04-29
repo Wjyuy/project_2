@@ -39,11 +39,11 @@
   <script src="${pageContext.request.contextPath}/js/jquery.js"></script>
   <script>
 	  $(document).on("click", ".paginate_button a", function(e) {
-		e.preventDefault(); // 기본 이동 막고
-		    const page = $(this).attr("href"); // href 속성 읽기
-		    $("#actionForm").find("input[name='pageNum']").val(page); // pageNum에 채워주고
+		e.preventDefault(); 
+		    const page = $(this).attr("href"); 
+		    $("#actionForm").find("input[name='pageNum']").val(page);
 		    console.log("@#페이징>" + page);
-		    $("#actionForm").submit(); // 폼 전송
+		    $("#actionForm").submit(); 
 	  });
   </script>
 </head>
@@ -145,6 +145,7 @@
         <h2>전국 리콜 현황 전체보기</h2>
 		
 		<div class="widgets-container">
+			
 			<!--리콜정보 출력-->
 			<form id="actionForm" action="recall_list" method="get">
 			    <input type="hidden" name="pageNum" value="${pageMaker.cri.pageNum}">
