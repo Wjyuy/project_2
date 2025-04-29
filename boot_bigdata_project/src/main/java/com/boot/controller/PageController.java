@@ -37,6 +37,7 @@ public class PageController {
 		
 		model.addAttribute("list", list);
 		model.addAttribute("pageMaker", new PageDTO(total, cri));
+		log.info("@# : "+new PageDTO(total, cri));
 		
 		return "list";
 	}
