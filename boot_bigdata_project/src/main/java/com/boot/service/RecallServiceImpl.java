@@ -6,17 +6,24 @@ import java.io.StringReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 
+import com.boot.dao.BoardAttachDAO;
+import com.boot.dao.PageDAO;
+import com.boot.dao.RecallStaticDAO;
 import com.boot.dto.Criteria;
 import com.boot.dto.Defect_DetailsDTO;
 
@@ -27,6 +34,9 @@ import lombok.extern.slf4j.Slf4j;
 public class RecallServiceImpl implements RecallService{
 	
 	private final String serviceKey = "PLMG96N58S";
+	
+	@Autowired
+	private SqlSession sqlSession;
 	
 	@Override
 	public List<Defect_DetailsDTO> getProductList(Criteria cri, String cntntsId) throws Exception {
@@ -120,5 +130,15 @@ public class RecallServiceImpl implements RecallService{
 	        }
 	        return 0;
 	    }
+	}
+
+	@Override
+	public int getdefect_reports_count(Integer startYear, Integer endYear) {
+		Map<String, Object> params = new HashMap<>();
+		
+		RecallStaticDAO dao = sqlSession.getMapper(RecallStaticDAO.class);
+	    params.put("start_year", startYear);
+	    params.put("end_year", endYear);
+	    return dao.getdefect_reports_count(params);
 	}
 }

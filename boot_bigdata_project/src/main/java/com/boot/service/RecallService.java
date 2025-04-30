@@ -8,4 +8,5 @@ import com.boot.dto.Defect_DetailsDTO;
 public interface RecallService {
     List<Defect_DetailsDTO> getProductList(Criteria cri, String cntntsId) throws Exception;
     int getTotalCount(Criteria cri, String cntntsId) throws Exception;
+    int getdefect_reports_count(Integer startYear, Integer endYear);
 }

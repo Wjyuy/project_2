@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.boot.dto.Criteria;
 import com.boot.dto.Defect_DetailsDTO;
@@ -20,10 +21,17 @@ public class RecallController {
 	@Autowired
     private RecallService recallService;
 	
-	@RequestMapping("/test")
-	public String list(Model model) {
-		log.info("@#test");
-		return "test";
+	@RequestMapping("/recall_statics")
+	public String recall_statics( 
+			@RequestParam(required = false) Integer startYear,
+		    @RequestParam(required = false) Integer endYear,
+		    Model model) {
+		
+		log.info("@#recall_statics");
+		int count = recallService.getdefect_reports_count(startYear, endYear);
+		 model.addAttribute("count", count);
+		
+		return "recall_statics";
 	}
 	
 	@RequestMapping("/recall_list")
@@ -44,5 +52,6 @@ public class RecallController {
 	    
 		return "recall_list";
 	}
+	
 	
 }
