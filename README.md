@@ -16,6 +16,13 @@
   - ⚠️ announce 는 프론트 일시적 마무리, 추가 수정 예정 있음
   - ❌ 백앤드 구현 예정
 
+- **결함신고 페이지** (`defect_reports.jsp`)
+  - ✅ defect_reports.jsp-insert기능 완료
+  - defect_details_check.jsp : 미완성 
+   - 👉 (폼형식 관리자(는없지만)defect_reports 에 있는 글 검수하고 →defect_details로 insert 하는 페이지 )
+  - ❌ 백앤드 기본틀 사용, 구현 예정, 프론트 수정필요
+
+
 #### 🛠️ 추가 및 수정된 파일 목록
 
 - `RecallController` (수정)
@@ -23,10 +30,20 @@
 - `PageService` (추가)
 - `PageServiceImpl` (추가)
   - 👉 PageServiceImpl: XML 파일 형식을 List로 변환하는 메소드 포함
+
 - `announce.jsp` (추가)
 - `notice.jsp` (추가)
 - `AnnounceController.java` (추가)
 - `NoticeController.java` (추가)
+
+- `defect_reports.jsp` (추가)
+- `defect_reports_ok.jsp` (추가)
+- `DefectController` (추가)
+- `NoticeController.java` (추가)
+- `DefectDAO` (추가)
+- `Defect_ReportsDTO` (추가)
+- `DefactService.java` (추가)
+- `DefactServiceImpl.java` (추가)
 
 </details>
 
