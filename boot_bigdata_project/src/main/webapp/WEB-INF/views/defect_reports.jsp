@@ -31,13 +31,14 @@
 
    <!-- Main CSS File -->
    <link href="assets/css/main.css" rel="stylesheet">
-
+	
+   
  
 </head>
 <body class="index-page">
 
 	<header id="header" class="header fixed-top">
-
+		
 		    <div class="topbar d-flex align-items-center">
 		      <div class="container d-flex justify-content-center justify-content-md-between">
 		        <div class="contact-info d-flex align-items-center">
@@ -96,6 +97,39 @@
 		      </div>
 
 		    </div>
+			
+			<style type="text/css">
+					   /* 자동완성 */
+					   .auto_card_main {
+					       position: absolute;
+					       top: 70px;
+					       left: 0;
+					       width: calc(100% - 60px);
+					       background-color: #fff;
+					       z-index: 10;
+					       text-align: left;
+					       box-shadow: rgba(39, 45, 40, 0.3) 5px 5px 10px;
+					       padding: 30px;
+					       border: 1px solid #0297d6;
+					   }
+
+					   .auto_card_main li a {
+					       font-size: 16px;
+					       font-weight: 300;
+					       line-height: 1.75;
+					       text-align: left;
+					       color: #333333;
+					   }
+
+					   .auto_card_main ul {
+					       margin-bottom: 0;
+					   }
+
+					   .auto_card_main li a span {
+					       color: #0297d6;
+					   }
+					   </style>
+
 
 		  </header>
 
@@ -139,31 +173,52 @@
 			                	<input id="residentId" name="birth_date" class="uk-input uk-form-width-medium" type="text" maxlength="7" placeholder="예)9901011" >
 			                </td>
 			            </tr>
-			            <tr>
-			                <th class="th">휴대폰번호<i class="ion-ios7-checkmark-empty"></i></th>
-			                <td class="td phone">
-								<select id="cellular1" class="uk-select">
-									<option value="010">010</option>
-									<option value="011">011</option>
-									<option value="016">016</option>
-					 				<option value="017">017</option>
-									<option value="019">019</option>
-								</select>
-								<span><input type="number" pattern="\d*" id="cellular2" min="0" maxlength="4" oninput="maxLengthCheck(this)" class="uk-input reqed" title="핸드폰번호"></span>
-								<span><input type="number" pattern="\d*" id="cellular3" min="0" maxlength="4" oninput="maxLengthCheck(this)" class="uk-input reqed" title="핸드폰번호"></span>
-								<input type="hidden" id="mobile_number" name="mobile_number" value="01097324436">
-							</td>
-			            </tr>
-			            <tr>
-			                <th class="th">전화번호</th>
-			                <td class="td phone">
-								<input id="phone_number" type="number" pattern="\d*" min="0" maxlength="3" oninput="maxLengthCheck(this)" class="uk-input">
-								<span><input id="telephone2" type="number" pattern="\d*" min="0" maxlength="4" oninput="maxLengthCheck(this)" class="uk-input"></span>
-								<span><input id="telephone3" type="number" pattern="\d*" min="0" maxlength="4" oninput="maxLengthCheck(this)" class="uk-input"></span>
-								<input type="hidden" id="phone_number" name="phone_number">
-							</td>
-			            </tr>
-			            <tr>
+<!--			            <tr>-->
+<!--			                <th class="th">휴대폰번호<i class="ion-ios7-checkmark-empty"></i></th>-->
+<!--			                <td class="td phone">-->
+<!--								<select id="cellular1" name="mobile_number1" class="uk-select">-->
+<!--									<option value="010">010</option>-->
+<!--									<option value="011">011</option>-->
+<!--									<option value="016">016</option>-->
+<!--					 				<option value="017">017</option>-->
+<!--									<option value="019">019</option>-->
+<!--								</select>-->
+<!--								<span><input type="number" name="mobile_number2"  pattern="\d*" id="cellular2" min="0" maxlength="4" oninput="maxLengthCheck(this)" class="uk-input reqed" title="핸드폰번호"></span>-->
+<!--								<span><input type="number" name="mobile_number3" pattern="\d*" id="cellular3" min="0" maxlength="4" oninput="maxLengthCheck(this)" class="uk-input reqed" title="핸드폰번호"></span>-->
+<!--								<input type="number" id="mobile_number" name="mobile_number" >-->
+<!--							</td>-->
+<!--			            </tr>-->
+						<tr>
+						  <th class="th">휴대폰번호<i class="ion-ios7-checkmark-empty"></i></th>
+						  <td class="td phone">
+						    <!-- 사용자 입력용 -->
+						    <input type="text" id="cellular_display" oninput="formatAndStorePhone()" maxlength="13" class="uk-input reqed" placeholder="예: 01012345678">
+						    
+						    <!-- 서버 전송용 -->
+						    <input type="hidden" id="mobile_number" name="mobile_number">
+						  </td>
+						</tr>
+						
+						<tr>
+						  <th class="th">전화번호</th>
+						  <td class="td phone">
+						    <!-- 사용자 입력용 -->
+						    <input type="text" id="telephone_display" oninput="formatAndStoreTelephone()" maxlength="13" class="uk-input" placeholder="예: 0212345678">
+						    
+						    <!-- 서버 전송용 -->
+						    <input type="hidden" id="phone_number" name="phone_number">
+						  </td>
+						</tr>
+						
+<!--			            <tr>-->
+<!--			                <th class="th">전화번호</th>-->
+<!--			                <td class="td phone">-->
+<!--								<input id="phone" type="number" name="phone_number1" pattern="\d*" min="0" maxlength="3" oninput="maxLengthCheck(this)" class="uk-input">-->
+<!--								<span><input id="telephone2" type="number" name="phone_number2" pattern="\d*" min="0" maxlength="4" oninput="maxLengthCheck(this)" class="uk-input"></span>-->
+<!--								<span><input id="telephone3" type="number" name="phone_number3" pattern="\d*" min="0" maxlength="4" oninput="maxLengthCheck(this)" class="uk-input"></span>-->
+<!--							</td>-->
+<!--			            </tr>-->
+<!--			            <tr>-->
 							<th class="th">주소<i class="ion-ios7-checkmark-empty"></i></th>
 							<td class="td addr">
 <!--								<p><input id="zipcode" name="zipcode" class="uk-input uk-form-width-medium reqed" title="주소" type="text" readonly="">-->
@@ -182,10 +237,11 @@
 								<label for="podCk2"><input id="podCk2" name="visibility" class="uk-radio" type="radio" value="false"> 비공개</label>
 							</td>
 						</tr>
+
 						<tr class="layerPasswd">
 			                <th class="th">비밀번호<i class="ion-ios7-checkmark-empty"></i></th>
-			                <td class="td"><input id="password" name="password" class="uk-input uk-form-width-medium reqed" title="비밀번호" type="password">
-								
+			                <td class="td"><input id="password" name="password" oninput="validatePassword()" class="uk-input uk-form-width-medium reqed" title="비밀번호" type="password">
+							<span id="password-msg" class="uk-text-meta" style="color: red;"></span><br>
 			                <span class="uk-text-meta">비밀번호는 9~15자의 영문/숫자/특수문자(~, !, @, #, $, *, (, ), =, +, _, ., |) 혼용만 가능합니다.</span></td>
 			            </tr>
 			        </tbody>
@@ -232,22 +288,117 @@
 	                        <th class="th">제조일자<i class="ion-ios7-checkmark-empty"></i></th>
 	                        <td class="td"><input id="car_manufacturing_date" name="car_manufacturing_date" class="uk-input uk-form-width-medium" type="date" ></td>
                     	</tr>
+						</table>
+						
+		
+	     
+	    
       </form>
     </div>
   </section>
 </main>
 
 <footer id="footer" class="footer accent-background">
-
-					
-	
 	<div class="text-center">
-						<button type="submit" class="btn btn-primary" margin:100% >자동차 결함신고</button>
-     
-    </div>
+<!--			<button type="submit" class="btn btn-primary"  onclick="document.querySelector('form').submit(); margin-left:10px >자동차 결함 신고</button>-->
+			<button type="button" class="btn btn-primary" onclick="document.querySelector('form').submit();">
+			  자동차 결함 신고
+			</button>
+	</div>			
+	
 </footer>
 
 <script src="../../vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/main.js"></script>
+<script>
+function formatAndStorePhone() {//휴대전화번호 스크립트
+  const input = document.getElementById("cellular_display");
+  const hidden = document.getElementById("mobile_number");
+
+  // 숫자만 추출
+  let raw = input.value.replace(/[^0-9]/g, '');
+
+  // 하이픈 표시용 포맷
+  let formatted = raw;
+  if (raw.length <= 3) {
+    formatted = raw;
+  } else if (raw.length <= 7) {
+    formatted = raw.slice(0, 3) + '-' + raw.slice(3);
+  } else {
+    formatted = raw.slice(0, 3) + '-' + raw.slice(3, 7) + '-' + raw.slice(7, 11);
+  }
+
+  input.value = formatted;
+
+  // 전송할 값: 하이픈 제거하거나 포함해도 됨
+  hidden.value = formatted; // or: hidden.value = raw;
+}
+
+function formatAndStoreTelephone() {//전화번호 스크립트
+  const input = document.getElementById("telephone_display");
+  const hidden = document.getElementById("phone_number");
+
+  let raw = input.value.replace(/[^0-9]/g, '');
+
+  // 지역번호가 02이면 (2자리), 그 외는 3자리로 처리
+  let isSeoul = raw.startsWith('02');
+  let formatted = raw;
+
+  if (isSeoul) {
+    if (raw.length <= 2) {
+      formatted = raw;
+    } else if (raw.length <= 6) {
+      formatted = raw.slice(0, 2) + '-' + raw.slice(2);
+    } else {
+      formatted = raw.slice(0, 2) + '-' + raw.slice(2, 6) + '-' + raw.slice(6, 10);
+    }
+  } else {
+    if (raw.length <= 3) {
+      formatted = raw;
+    } else if (raw.length <= 7) {
+      formatted = raw.slice(0, 3) + '-' + raw.slice(3);
+    } else {
+      formatted = raw.slice(0, 3) + '-' + raw.slice(3, 7) + '-' + raw.slice(7, 11);
+    }
+  }
+
+  input.value = formatted;
+  hidden.value = formatted; // or: raw
+  }
+</script>
+
+<script>
+function validatePassword() {
+  const passwordInput = document.getElementById("password");
+  const msgSpan = document.getElementById("password-msg");
+  const password = passwordInput.value;
+
+  const specialChars = "~!@#$*()=+_.|";
+  const escapedSpecialChars = specialChars.replace(/[-[\]/{}()*+?.\\^$|]/g, '\\$&');
+
+  const regex = new RegExp(
+    "^(?=.*[A-Za-z])(?=.*\\d)(?=.*[" + escapedSpecialChars + "])[A-Za-z\\d" + escapedSpecialChars + "]{9,15}$"
+  );
+
+  if (password.length === 0) {
+    msgSpan.textContent = "";
+    passwordInput.style.borderColor = "";
+    return;
+  }
+
+  if (!regex.test(password)) {
+    msgSpan.textContent = "조건에 맞지 않는 비밀번호입니다.";
+    passwordInput.style.borderColor = "red";
+    msgSpan.style.color = "red";
+  } else {
+    msgSpan.textContent = "사용 가능한 비밀번호입니다.";
+    passwordInput.style.borderColor = "green";
+    msgSpan.style.color = "green";
+  }
+}
+</script>
+
+
+
 </body>
 </html>

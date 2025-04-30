@@ -27,32 +27,60 @@
 
 - `RecallController` (수정)
 - `Defect_DetailsDTO` (추가)
-- `PageService` (추가)
-- `PageServiceImpl` (추가)
+- `RecallService` (추가)
+- `RecallServiceImpl` (추가)
+- `recallstatic.xml` (추가)
   - 👉 PageServiceImpl: XML 파일 형식을 List로 변환하는 메소드 포함
 
 - `announce.jsp` (추가)
 - `notice.jsp` (추가)
-- `AnnounceController.java` (추가)
-- `NoticeController.java` (추가)
+- `AnnounceController` (추가)
+- `NoticeController` (추가)
 
 - `defect_reports.jsp` (추가)
 - `defect_reports_ok.jsp` (추가)
 - `DefectController` (추가)
-- `NoticeController.java` (추가)
+- `NoticeController` (추가)
 - `DefectDAO` (추가)
 - `Defect_ReportsDTO` (추가)
-- `DefactService.java` (추가)
-- `DefactServiceImpl.java` (추가)
+- `DefactService` (추가)
+- `DefactServiceImpl` (추가)
+
+- `mybatis-config.xml` (수정)
 
 </details>
 
+
 <details>
+
 <summary>📅 2025/04/30 작업 내용</summary>
 
 <br>
 
-- 
-  - **무슨 기능을 구현**, **어떤 파일을 수정**, **이슈나 한계** 등
+- **전국 리콜 통계** (`recall_statics.jsp`)
+  - ✅ 연도별 통계처리 (연도선택> Defect_Reports 테이블 조회해서 차종,대수 등 표 형식 출력)
+  - ✅ 연도별 그래프 추가 완료
+  - ✅ 제조사별 표, 그래프 추가 완료
+  - TODO : 월별, 리콜현황, 결함신고 기능 구현 필요
+
+  - TODO : 전국 리콜 현황 전체보기(29일 만든 것) DB형식으로 교체 필요
+
+- **결함신고 페이지** (`defect_reports.jsp`)
+  - ✅ defect_reports.jsp : insert기능 보완(엉성했던 파트 수정)
+  - `DefectController : detail부분 추가
+  - defect_details_check.jsp : 관리자가defect_reports검수하고 진행중 
+  - TODO : 프론트 미구현 
+  
+#### 🛠️ 추가 및 수정된 파일 목록
+
+- `DefectReportSummaryDTO` (추가)
+- `recallstatic.xml` (추가)
+- `RecallController` (수정)
+- `RecallService` (수정)
+- `RecallServiceImpl` (수정)
+
+- `defect_reports.jsp` (수정)
+- `defect_reports_ok.jsp` (수정)
+- `DefectController` (수정)
 
 </details>

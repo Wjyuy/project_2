@@ -35,7 +35,6 @@ public class DefectController {
 	public String list(Model model) {
 		log.info("@#defect_reports");
 		
-		
 		return "defect_reports";
 	}
 	
@@ -43,6 +42,18 @@ public class DefectController {
 	public String defect_reports_ok(Model model) {
 		log.info("@#defect_reports");
 		return "defect_reports_ok";
+	}
+	
+	@RequestMapping("/defect_details_check")
+	public String defect_details_check(Model model) {
+		log.info("@#defect_details_check");
+		return "defect_details_check";
+	}
+	
+	@RequestMapping("/defect_list")
+	public String defect_list(Model model) {
+		log.info("@#defect_list");
+		return "defect_list";
 	}
 //	
 }
