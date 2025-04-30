@@ -69,7 +69,8 @@
 - **결함신고 페이지** (`defect_reports.jsp`)
   - ✅ defect_reports.jsp : insert기능 보완(엉성했던 파트 수정)
   - `DefectController : detail부분 추가
-  - defect_details_check.jsp : 관리자가defect_reports검수하고 진행중 
+  - defect_details_check.jsp : 관리자가defect_reports검수하고 진행중
+  - 📌TODO : 버튼 클릭시 select된 내용 가지고와서 검수완료시-> detail table 에 insert되도록 기능구현 
   - 📌TODO : 프론트단 내일 할 예정 
 
 - **신고내역조회 페이지** (`defectList.jsp`)
