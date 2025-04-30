@@ -1,0 +1,16 @@
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.boot.dao.DefectListDAO">
+
+    <select id="defectList" resultType="com.boot.dto.DefectListDTO">
+        select id, reporter_name, report_type, car_model, report_date from defect_reports
+    </select>
+    
+
+    
+</mapper>
+
+
+

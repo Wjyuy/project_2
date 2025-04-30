@@ -12,6 +12,7 @@ import com.boot.dao.PageDAO;
 import com.boot.dto.BoardDTO;
 import com.boot.dto.CommentDTO;
 import com.boot.dto.Criteria;
+import com.boot.dto.DefectListDTO;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -22,26 +23,47 @@ public class PageServiceImpl implements PageService{
 	private SqlSession sqlSession;
 
 	@Override
-	public ArrayList<BoardDTO> listWithPaging(Criteria cri) {
-		log.info("@# PageServiceImpl listWithPaging메소드 입니다 ");
-		log.info("@# cri=> "+cri);
+	public ArrayList<DefectListDTO> listWithPaging(Criteria cri) {
+		log.info("@# PageServiceImpl listWithPaging");
+		log.info("@# cri 여기"+cri);
 		
 		PageDAO dao=sqlSession.getMapper(PageDAO.class);
-		ArrayList<BoardDTO> list =dao.listWithPaging(cri);
+		ArrayList<DefectListDTO> defectList = dao.listWithPaging(cri);
 		
-		return list;
+		return defectList;
 	}
+	
+//	@Override
+//	public ArrayList<BoardDTO> listWithPaging(Criteria cri) {
+//		log.info("@# PageServiceImpl listWithPaging");
+//		log.info("@# cri"+cri);
+//		
+//		PageDAO dao=sqlSession.getMapper(PageDAO.class);
+//		ArrayList<BoardDTO> list = dao.listWithPaging(cri);
+//		
+//		return list;
+//	}
+
+//	@Override
+//	public int getTotalCount() {
+//		log.info("@# PageServiceImpl getTotalCount");
+//		
+//		PageDAO dao=sqlSession.getMapper(PageDAO.class);
+//		int total = dao.getTotalCount();
+//		
+//		return total;
+//	}
 
 	@Override
 	public int getTotalCount(Criteria cri) {
-		log.info("@# getTotalCount 메소드 입니다 ");
+log.info("@# PageServiceImpl getTotalCount");
 		
 		PageDAO dao=sqlSession.getMapper(PageDAO.class);
-		int total =dao.getTotalCount(cri);
+		int total = dao.getTotalCount(cri);
 		
 		return total;
 	}
-
+	
 }
 
 
