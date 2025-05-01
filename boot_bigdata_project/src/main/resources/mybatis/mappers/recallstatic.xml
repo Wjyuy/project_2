@@ -1,0 +1,27 @@
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.boot.dao.RecallStaticDAO">
+
+	<sql id="yearRange">
+	    <where>
+	        <if test="start_year != null and end_year != null">
+	            YEAR(report_date) BETWEEN #{start_year} AND #{end_year}
+	        </if>
+	        <if test="start_year != null and end_year == null">
+	            YEAR(report_date) &gt;= #{start_year}
+	        </if>
+	        <if test="start_year == null and end_year != null">
+	            YEAR(report_date) &lt;= #{end_year}
+	        </if>
+	    </where>
+	</sql>
+	
+    <select id="getdefect_reports_count" resultType="int" parameterType="map">
+		SELECT COUNT(*) 
+		FROM defect_reports
+		<include refid="yearRange"></include>
+    </select>
+
+</mapper>
