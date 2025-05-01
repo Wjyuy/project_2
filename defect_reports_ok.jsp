@@ -266,7 +266,8 @@
           <div class="container">
             <ol>
                <li><a href="main">차량리콜도우미</a></li>
-              <li class="current">정보 입력</li>
+               <li><a href="defect_reports">정보 입력</a></li>
+              <li class="current">정보 입력 확인</li>
             </ol>
           </div>
         </nav>

@@ -282,7 +282,8 @@
 	      <div class="container">
 	        <ol>
 	          <li><a href="main">차량리콜도우미</a></li>
-	          <li class="current">관리자 신고내역 검수</li>
+	          <li><a href="defect_reports">결함신고</a></li>
+	          <li class="current">리콜 정보 검수</li>
 	        </ol>
 	      </div>
 	    </nav>
