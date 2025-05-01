@@ -4,62 +4,6 @@
 <html>
 <head>
 <title>리콜 정보 출력</title>
-<!--<script src="${pageContext.request.contextPath}/js/jquery.js"></script>-->
-<!--<script type="text/javascript">-->
-<!--    $(function() {-->
-<!--        $.ajax({-->
-<!--             url: "/proxy?cntntsId=0301",  // proxy.jsp 대신 Spring Boot 컨트롤러 호출-->
-<!--             dataType: "xml",-->
-<!--             success: function(data) {-->
-<!--                 console.log(data);  // 추가-->
-<!--                 var $data = $(data).find("return  > content");-->
-
-<!--                 if ($data.length > 0) {-->
-<!--                     var tb = $("<table border='1' style='border-collapse:collapse;'>");-->
-
-<!--                     var header = $("<tr/>").append(-->
-<!--                         $("<th/>").text("제품명"),-->
-<!--                         $("<th/>").text("제조사"),-->
-<!--                         $("<th/>").text("제조기간"),-->
-<!--                         $("<th/>").text("기타정보"),-->
-<!--                         $("<th/>").text("모델명"),-->
-<!--                         $("<th/>").text("리콜유형"),-->
-<!--                         $("<th/>").text("연락처")-->
-<!--                     );-->
-<!--                     tb.append(header);-->
-
-<!--                     $.each($data, function(i, o){-->
-<!--                         var productNm = $(o).find("productNm").text().trim();-->
-<!--                         var makr = $(o).find("makr").text().trim();-->
-<!--                         var mnfcturPd = $(o).find("mnfcturPd").text().trim();-->
-<!--                         var etcInfo = $(o).find("etcInfo").text().trim();-->
-<!--                         var modlNmInfo = $(o).find("modlNmInfo").text().trim();-->
-<!--                         var recallSe = $(o).find("recallSe").text().trim();-->
-<!--                         var recallEntrpsInfo = $(o).find("recallEntrpsInfo").text().trim();-->
-
-<!--                         var row = $("<tr/>").append(-->
-<!--                             $("<td/>").text(productNm),-->
-<!--                             $("<td/>").text(makr),-->
-<!--                             $("<td/>").text(mnfcturPd),-->
-<!--                             $("<td/>").html(etcInfo),-->
-<!--                             $("<td/>").text(modlNmInfo),-->
-<!--                             $("<td/>").text(recallSe),-->
-<!--                             $("<td/>").text(recallEntrpsInfo)-->
-<!--                         );-->
-<!--                         tb.append(row);-->
-<!--                     });-->
-
-<!--                     $(".wrap").html(tb);-->
-<!--                 } else {-->
-<!--                     $(".wrap").text("데이터가 없습니다.");-->
-<!--                 }-->
-<!--             },-->
-<!--             error: function() {-->
-<!--                 $(".wrap").text("데이터 로딩 실패!");-->
-<!--             }-->
-<!--        });-->
-<!--    });-->
-<!--</script>-->
 
 <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -127,6 +71,16 @@ span.active {
             border-bottom: 1px solid #ccc;
         }
   </style>
+  <script src="${pageContext.request.contextPath}/js/jquery.js"></script>
+  <script>
+    $(document).on("click", ".paginate_button a", function(e) {
+  	e.preventDefault(); 
+  	    const page = $(this).attr("href"); 
+  	    $("#actionForm").find("input[name='pageNum']").val(page);
+  	    console.log("@#페이징>" + page);
+  	    $("#actionForm").submit(); 
+    });
+  </script>
 </head>
 <body class="starter-page-page">
 
@@ -135,15 +89,15 @@ span.active {
     <div class="topbar d-flex align-items-center">
       <div class="container d-flex justify-content-center justify-content-md-between">
         <div class="contact-info d-flex align-items-center">
-          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">contact@example.com</a></i>
+          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">tjswls0147@naver.com</a></i>
           <i class="bi bi-phone d-flex align-items-center ms-4"><span>+051 1544-9970</span></i>
         </div>
-        <div class="social-links d-none d-md-flex align-items-center">
-          <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-        </div>
+		<div class="social-links d-none d-md-flex align-items-center">
+		   <a href="https://x.com/home" class="twitter"><i class="bi bi-twitter-x"></i></a>
+		   <a href="https://www.facebook.com" class="facebook"><i class="bi bi-facebook"></i></a>
+		   <a href="https://www.instagram.com" class="instagram"><i class="bi bi-instagram"></i></a>
+		   <a href="https://www.chatgpt.com" class="linkedin"><i class="bi bi-linkedin"></i></a>
+		 </div>
       </div>
     </div><!-- End Top Bar -->
 
@@ -164,25 +118,6 @@ span.active {
             <li><a href="#services">리콜제도</a></li>
             <li><a href="#portfolio">안전운전</a></li>
             <li><a href="#team">리콜센터</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
-                <li><a href="#">Dropdown 1</a></li>
-                <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                  <ul>
-                    <li><a href="#">Deep Dropdown 1</a></li>
-                    <li><a href="#">Deep Dropdown 2</a></li>
-                    <li><a href="#">Deep Dropdown 3</a></li>
-                    <li><a href="#">Deep Dropdown 4</a></li>
-                    <li><a href="#">Deep Dropdown 5</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Dropdown 2</a></li>
-                <li><a href="#">Dropdown 3</a></li>
-                <li><a href="#">Dropdown 4</a></li>
-              </ul>
-            </li>
-            <li><a href="#contact">Contact</a></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
@@ -222,7 +157,6 @@ span.active {
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up" style="list-style-type: none; ">
-        <h2>제작관리</h2>
 		<!-- Faq Section -->
 		<section id="faq" class="faq section">
 
@@ -233,147 +167,76 @@ span.active {
 		      <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
 		        <div class="content px-xl-5">
 		          <h3><span>자주 묻는 </span><strong>질문들</strong></h3>
-		          <p>
-		           
-		          </p>
 		        </div>
 		      </div>
 
 		      <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
 
 		        <div class="faq-container">
-		          <div class="faq-item faq-active">
-		            <h3><img src="assets/img/qna.png" alt="">&nbsp<span>자동차 결함을 신고하고 싶은데 어떻게 하나요?</span></h3>
-		            <div class="faq-content">
-		              <p>						자동차 운행 중 안전상의 문제 등 자동차 결함과 관련하여 국토해양부 및 자동차안전연구원에서는 자동차제작결함정보를 수집하고 있습니다.
-
-						자동차결함신고센터(www.car.go.kr)를 방문하셔서 본인의 신상정보 및 차량정보를 입력하신 후 자동차 결함현상에 대하여 입력하거나 제작결함신고전용전화(080-357-2500)를 이용하시길 바랍니다.
-
-						여러분이 제공하신 자동차제작결함정보는 향후 제작결함조사를 수행하는 하나의 귀중한 자료로 활용됩니다.
-						제공하신 제작결함 정보에 대해 검토와 분석에 일정기간이 소요됨에 따라 매 건별로 회신이 불가능하며, 경우에 따라서 제작결함 정보를 제공한 자동차 소유자에게 제작결함조사를 수행하는 성능시험대행기관에서 제공정보에 대해 유선으로 확인을 실시할 수 있습니다.</p>
-		            </div>
-		            <i class="faq-toggle bi bi-chevron-right"></i>
-		          </div><!-- End Faq item-->
-
-		          <div class="faq-item">
-		            <h3><img src="assets/img/qna.png" alt="">&nbsp<span>제작결함조사에서는 어떤 업무를 수행하나요?</span></h3>
-		            <div class="faq-content">
-		              <p>						제작결함조사는 정부가 규정한 안전기준 적합 여부를 확인하는 자기인증적합조사와 안전 운행에 지장을 주는 지 여부를 확인하는 안전결함조사가 있으며, 자기인증적합조사와 안전결함조사의 세부 내용은 다음과 같습니다.
-
-						ㅇ 자기인증 적합조사
-						- 자동차 제작.조립 수입자가 안전기준 등 자동차관리법령에 적합하게 자기인증하여 판매한 자동차에 대해, 정부가 시판중인 자동차를 구매하여 자동차관리법령에 적합하게 제작되었는지를 확인하는 조사입니다.
-
-						ㅇ 안전결함조사
-						- 안전결함조사는 안전사고 발생 가능성이 높거나 설계와 다르게 오작동 등 자동차 안전운행에 지장을 줄 수 있는 안전관련 결함 여부를 조사하는 제도입니다.
-
-						* 자기인증적합조사 및 안전결함조사는 “자동차안전연구원”에서 시행합니다.</p>
-					</div>
-		            <i class="faq-toggle bi bi-chevron-right"></i>
-		          </div><!-- End Faq item-->
-
-		          <div class="faq-item">
-		            <h3><img src="assets/img/qna.png" alt="">&nbsp<span>리콜시행전 자비로 수리한 부분에 대한 보상이 가능할까요?</span></h3>
-		            <div class="faq-content">
-		              <p>리콜보상제도는 자동차관리법 제31조의2에 따라 제작사가 자기인증하여 판매한 자동차에 결함이 발생한 경우 제작결함 시정전에 자동차 소유자가 자기비용으로 결함을 시정한 경우 이에 대한 비용을 제작자가 보상하는 제도입니다. 정부는 리콜보상제도를 2009년 3월부터 도입하였으며 자동차 소비자가 리콜시행 이전 1년간 지불한 비용을 증명할 수 있는 서류를 구비하여 제작자에 청구하시면 됩니다. 구비서류 1. 제134조제2항에 따른 별지 제89호의2서식의 자동차점검ㆍ정비내역서 2.「부가가치세법」에 따른 세금계산서 또는 영수증(신용카드매출전표를 포함한다) 3. 자동차등록증, 자동차 소유자의 신분증 및 입금통장 사본
-						</p>
-		            </div>
-		            <i class="faq-toggle bi bi-chevron-right"></i>
-		          </div><!-- End Faq item-->
-
-		          <div class="faq-item">
-		            <h3><img src="assets/img/qna.png" alt="">&nbsp<span>제가 자동차결함 신고를 하면 즉시 제작결함조사를 하나요?</span></h3>
-		            <div class="faq-content">
-		              <p>제작결함조사는 자동차의 기능 이상, 설계의도를 벗어난 오작동 등 자동차 안전운행에 지장을 줄 수 있는 안전도 관련 결함 여부를 확인하는 것입니다.제작결함조사와 관련하여 자동차제작결함정보전산망, 자동차제작결함신고전화 및 언론매체 등 다양한 채널을 통하여 정보를 수집하고 있습니다.
-
-						수집된 정보는 주기적인 분석을 통하여 자동차제작결함조사여부를 판단하고 있으며 동일차종에서 동일 현상으로 다수의 결함 발생 여부 등을 분석하고 있습니다.
-
-						이러한 분석자료를 바탕으로 제작결함조사를 실시하게 되므로 상당기간이 소요됨을 양해하시길 바랍니다
-						</p>
-					</div>
-		            <i class="faq-toggle bi bi-chevron-right"></i>
-		          </div><!-- End Faq item-->
-
-		          <div class="faq-item">
-		            <h3><img src="assets/img/qna.png" alt="">&nbsp<span>리콜(제작결함 시정) 사실은 어떻게 일반인에게 알려지나요?</span></h3>
-		            <div class="faq-content">
-		              <p>국토해양부는 리콜사실의 대국민 공개를 위해 리콜 결정시 언론에 보도자료를 공표하고, 제작사는 중앙일간지에 리콜사실을 고지하며, 자동차소유자에게는 리콜 우편통지를 통해 알려지도록 하고 있으며, 리콜현황을 「자동차결함신고센터(www.car.go.kr)」에서 항상 확인이 가능합니다.
-						</p>
-					  </div>
-		            <i class="faq-toggle bi bi-chevron-right"></i>
-		          </div><!-- End Faq item-->
-				  
-		          <div class="faq-item">
-		            <h3><img src="assets/img/qna.png" alt="">&nbsp<span>자동차 리콜(recall)과 제조물책임제도(pl)의 차이가 무엇인가요?</span></h3>
-		            <div class="faq-content">
-		              <p>자동차 리콜제도는 자동차의 결함으로 인해 국민의 생명 및 재산손실이 발생하거나 발생 가능성이 있는 경우에 그 자동차를 제작ㆍ조립 또는 수입한 제작자 등이 결함 관련 사실을 소비자에게 통보하여 수리, 교환 또는 환불 등의 조치를 통해 안전과 관련된 사고 및 소비자 피해를 사전에 예방하고 재발을 방지하기 위한 제도입니다.
-						제조물 책임(pl product liability) 제도는 제조업자(제조물 제조ㆍ가공 또는 수입을 업으로 하는 자)가 제조물의 결함으로 인하여 생명, 신체 또는 재산에 손해를 입은 자에게 그 손해를 배상토록 하는 손해배상 책임제도입니다.
-
-						* 리콜과 제조물책임제도는 안전과 관련한 소비자 피해와 권익을 보호하는 측면에서는 공통점이 있지만, 소비자 피해보상제도와 제조물책임제도가 이미 발생한 소비자 피해에 대하여 제작자가 직접 보상해주는 사후보상 측면의 제도인데 반하여, 리콜제도는 결함제품을 제작자가 자발적 또는 정부에 의해 강제적으로 적절한 시정조치를 취하여 소비자 피해를 사전에 방지하는 사전적 예방 차원의 보다 적극적인 소비자보호 제도입니다.
-					  </p>
-					</div>
-		            <i class="faq-toggle bi bi-chevron-right"></i>
-		          </div><!-- End Faq item-->
-				  
-		          <div class="faq-item">
-		            <h3><img src="assets/img/qna.png" alt="">&nbsp<span>리콜에는 자발적인 리콜과 강제적인 리콜이 있다고 하는데 차이점은 무엇인지요?</span></h3>
-		            <div class="faq-content">
-		              <p>국토해양부는 리콜사실의 대국민 공개를 위해 리콜 결정시 언론에 보도자료를 공표하고, 제작사는 중앙일간지에 리콜사실을 고지하며, 자동차소유자에게는 리콜 우편통지를 통해 알려지도록 하고 있으며, 리콜현황을 「자동차결함신고센터(www.car.go.kr)」에서 항상 확인이 가능합니다.</p>	
-					  </div>
-		            <i class="faq-toggle bi bi-chevron-right"></i>
-		          </div><!-- End Faq item-->
-				  
-		          <div class="faq-item">
-		            <h3><img src="assets/img/qna.png" alt="">&nbsp<span>리콜(제작결함 시정)명령은 어떤 방식으로 이루어지나요?</span></h3>
-		            <div class="faq-content">
-		              <p>자동차안전연구원의 제작결함조사 결과를 국토교통부장관 소속하에 구성된 제작결함심사평가위원회에서 심의 의결을 거쳐 리콜여부를 결정하며, 국토교통부의 청문을 실시한 다음 리콜명령을 하게 됩니다.
-
-						* 제작결함심사평가위원회는 대학교수, 시민단체, 한국소비자원 등 20명으로 구성</p>
-					</div>
-					<i class="faq-toggle bi bi-chevron-right"></i>
-		          </div><!-- End Faq item-->
-				  
-		          <div class="faq-item">
-		            <h3><img src="assets/img/qna.png" alt="">&nbsp<span>제작결함 정보수집이란 무엇을 말하는 것인가요?</span></h3>
-		            <div class="faq-content">
-		              <p>제작결함 정보수집은 자동차 소유자, 소비자단체, 자동차결함신고센터(www.car.go.kr)등을 통해 자동차 결함 정보를 수집하여 일정기간동안 동일문제에 대한 발생 빈도 및 지속성 등을 수집하는 행위를 말합니다.
-						</p>
-					  </div>
-		            <i class="faq-toggle bi bi-chevron-right"></i>
-		          </div><!-- End Faq item-->
-				  
-		          <div class="faq-item">
-		            <h3><img src="assets/img/qna.png" alt="">&nbsp<span>제 차를 교환 또는 환불받고 싶은데 가능한가요?</span></h3>
-		            <div class="faq-content">
-		              <p>새로 구매한 차량의 교환·환불에 대해서는 신차 교환·환불 e만족(adr.katri.or.kr)에서 도움을 받으시길 바랍니다. 아울러, 자동차 수리·교환 과정 중에 발생한 문제 등 신고인 개별사안에 대해서는 한국소비자원(kca.go.kr ☎1372)를 이용해 피해구제 등의 도움을 받으시길 바랍니다.
-						</p>
-					  </div>
-		            <i class="faq-toggle bi bi-chevron-right"></i>
-		          </div><!-- End Faq item-->
-
-		        </div>
-
-		      </div>
-		    </div>
-
-		  </div>
+					<c:forEach var="item" items="${noticeList}">
+			          <div class="faq-item">
+						<form id="actionForm" action="notice" method="get">
+						    <input type="hidden" name="pageNum" value="${pageMaker.cri.pageNum}">
+						    <input type="hidden" name="amount" value="${pageMaker.cri.amount}">
+						</form>
+		    	        <h3><img src="assets/img/qna.png" alt="">&nbsp<span>${item.question}</span></h3>
+		        	    <div class="faq-content">
+		            	  <p>${item.answer}</p>
+		            	</div>
+		            	<i class="faq-toggle bi bi-chevron-right"></i>
+	          			</div><!-- End Faq item-->
+				  	</c:forEach>
 
 		</section><!-- /Faq Section -->
+		
 
-  
-      <div class="paging">
-        <i class="fa-solid fa-angles-left" id="first_page">&lt;&lt;</i>
-        <i class="fa-solid fa-angle-left" id="prev_page">&lt;</i>
-        <div class="pages">
-          <span class="active">1</span>
-          <span>2</span>
-          <span>3</span>
-          <span>4</span>
-          <span>5</span>
-        </div>
-        <i class="fa-solid fa-angle-right" id="next_page">&gt;</i>
-        <i class="fa-solid fa-angles-right" id="last_page">&gt;&gt;</i>
-      </div>
 
+				<!-- Blog Pagination Section -->
+				<section id="blog-pagination" class="blog-pagination section">
+					<form method="get" id="searchForm">
+						<select name="type">
+							<option value=""<c:out value="${pageMaker.cri.type == null ? 'selected':''}"></c:out>>전체</option>
+							<option value="T"<c:out value="${pageMaker.cri.type eq 'T' ? 'selected':''}"></c:out>>제목</option>
+							<option value="C"<c:out value="${pageMaker.cri.type eq 'C' ? 'selected':''}"></c:out>>내용</option>
+						</select>
+						<input type="text" name="keyword" value="${pageMaker.cri.keyword}">
+						<button>Search</button>
+					</form>
+
+				  <div class="container">
+				    <div class="d-flex justify-content-center">
+					    <div class="div_page">
+					      <ul>
+							<c:if test="${pageMaker.prev}">
+					        	<li class="paginate_button"><a href="${pageMaker.startPage -1}"><i class="bi bi-chevron-left"></i></a></li>
+							</c:if>
+							
+							<c:forEach var="num" begin="${pageMaker.startPage}" end="${pageMaker.endPage}">
+								<li class="paginate_button">
+							        <a href="${num}" 
+							           class="${pageMaker.cri.pageNum eq num ? 'active' : ''}">
+							           ${num}
+							        </a>
+							    </li>
+		<!--			        <li><a href="#" class="active">2</a></li>-->
+							</c:forEach>		
+							<c:if test="${pageMaker.next}">
+					        	<li class="paginate_button"><a href="${pageMaker.endPage +1}"><i class="bi bi-chevron-right"></i></a></li>
+							</c:if>
+					      </ul>
+					  </div>
+				    </div>
+				  </div>
+				  <form id="actionForm" action="notice" method="get">
+				  		<input type="hidden" name="pageNum" value="${pageMaker.cri.pageNum}">
+				  		<input type="hidden" name="amount" value="${pageMaker.cri.amount}">
+				  		<!-- 페이징 검색 시 페이지번호를 클릭할때 필요한 파라미터 -->
+				  		<input type="hidden" name="type" value="${pageMaker.cri.type}">
+				  		<input type="hidden" name="keyword" value="${pageMaker.cri.keyword}">
+				  	</form>
+				  
+				</section><!-- /Blog Pagination Section -->
+		<a href="notice_write">글작성</a>
 
     </section><!-- /Starter Section Section -->
 
@@ -422,7 +285,7 @@ span.active {
           <h4>Contact Us</h4>
           <p>부산광역시 부산진구 중앙대로 672 2</p>
           <p>삼비빌딩</p>
-          <p>2층, 12층</p>
+          <p>2F, 12F</p>
           <p class="mt-4"><strong>Phone:</strong> <span>010-7750-8444</span></p>
           <p><strong>Email:</strong> <span>tjswls0147@naver.com</span></p>
         </div>
@@ -469,6 +332,34 @@ span.active {
 		          });
 		      });
     </script>
+	<script>  //Search 버튼 클릭
+		var searchForm= $("#searchForm");
+		
+	    $("#searchForm button").on("click",function () {
+	    	// alert("검색");
+
+			if (searchForm.find("option:selected").val() != "" &&
+			    !searchForm.find("input[name='keyword']").val() &&
+			    !searchForm.find("input[name='reportDate']").val()) {
+			    alert("키워드를 입력하세요.");
+			    return false;
+			}
+
+	    	searchForm.attr("action","notice").submit();
+	    })//end of searchForm click
+
+	    //type 콤보박스 변경
+	    $("#searchForm select").on("change",function () {
+	    	//전체일때
+	    	if (searchForm.find("option:selected").val()=="") {
+	    		//키워드를 널값으로 변경
+	    		searchForm.find("input[name='keyword']").val("");
+	    	}
+	    });//end of searchForm click
+	    
+
+	    </script>
+
 </body>
 
 </html>

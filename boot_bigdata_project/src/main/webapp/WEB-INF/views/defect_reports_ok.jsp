@@ -57,6 +57,8 @@
 					<button type="submit">이동</button>
 					&nbsp;&nbsp;
 					<a href="defect_reports">뒤로가기</a>
+					<a href="defect_details_check">관리자 페이지 이동 8~8</a>
+					
 				</td>
 			</tr>
 		</form>

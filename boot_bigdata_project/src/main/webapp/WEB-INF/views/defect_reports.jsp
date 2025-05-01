@@ -31,6 +31,8 @@
 
    <!-- Main CSS File -->
    <link href="assets/css/main.css" rel="stylesheet">
+   
+   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 	
    
  
@@ -173,21 +175,6 @@
 			                	<input id="residentId" name="birth_date" class="uk-input uk-form-width-medium" type="text" maxlength="7" placeholder="예)9901011" >
 			                </td>
 			            </tr>
-<!--			            <tr>-->
-<!--			                <th class="th">휴대폰번호<i class="ion-ios7-checkmark-empty"></i></th>-->
-<!--			                <td class="td phone">-->
-<!--								<select id="cellular1" name="mobile_number1" class="uk-select">-->
-<!--									<option value="010">010</option>-->
-<!--									<option value="011">011</option>-->
-<!--									<option value="016">016</option>-->
-<!--					 				<option value="017">017</option>-->
-<!--									<option value="019">019</option>-->
-<!--								</select>-->
-<!--								<span><input type="number" name="mobile_number2"  pattern="\d*" id="cellular2" min="0" maxlength="4" oninput="maxLengthCheck(this)" class="uk-input reqed" title="핸드폰번호"></span>-->
-<!--								<span><input type="number" name="mobile_number3" pattern="\d*" id="cellular3" min="0" maxlength="4" oninput="maxLengthCheck(this)" class="uk-input reqed" title="핸드폰번호"></span>-->
-<!--								<input type="number" id="mobile_number" name="mobile_number" >-->
-<!--							</td>-->
-<!--			            </tr>-->
 						<tr>
 						  <th class="th">휴대폰번호<i class="ion-ios7-checkmark-empty"></i></th>
 						  <td class="td phone">
@@ -237,13 +224,23 @@
 								<label for="podCk2"><input id="podCk2" name="visibility" class="uk-radio" type="radio" value="false"> 비공개</label>
 							</td>
 						</tr>
-
+						
 						<tr class="layerPasswd">
-			                <th class="th">비밀번호<i class="ion-ios7-checkmark-empty"></i></th>
-			                <td class="td"><input id="password" name="password" oninput="validatePassword()" class="uk-input uk-form-width-medium reqed" title="비밀번호" type="password">
-							<span id="password-msg" class="uk-text-meta" style="color: red;"></span><br>
-			                <span class="uk-text-meta">비밀번호는 9~15자의 영문/숫자/특수문자(~, !, @, #, $, *, (, ), =, +, _, ., |) 혼용만 가능합니다.</span></td>
-			            </tr>
+						    <th class="th">비밀번호<i class="ion-ios7-checkmark-empty"></i></th>
+						    <td class="td">
+						        <div style="position: relative; display: inline-block;">
+						            <input id="password" name="password" oninput="validatePassword()" class="uk-input uk-form-width-medium reqed" title="비밀번호" type="password">
+						            <button type="button" onclick="togglePassword()" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; padding: 0;">
+						                <i id="eyeIcon" class="ion-eye"></i>
+						            </button>
+						        </div>
+						        <br>
+						        <span id="password-msg" class="uk-text-meta" style="color: red;"></span><br>
+						        <span class="uk-text-meta">
+						            비밀번호는 9~15자의 영문/숫자/특수문자(~, !, @, #, $, *, (, ), =, +, _, ., |) 혼용만 가능합니다.
+						        </span>
+						    </td>
+						</tr>
 			        </tbody>
 			      </table>
 
@@ -301,7 +298,8 @@
 <footer id="footer" class="footer accent-background">
 	<div class="text-center">
 <!--			<button type="submit" class="btn btn-primary"  onclick="document.querySelector('form').submit(); margin-left:10px >자동차 결함 신고</button>-->
-			<button type="button" class="btn btn-primary" onclick="document.querySelector('form').submit();">
+<!--			<button type="button" class="btn btn-primary" onclick="document.querySelector('form').submit();">-->
+			<button type="button" class="btn btn-primary" onclick="handleSubmit()">
 			  자동차 결함 신고
 			</button>
 	</div>			
@@ -310,6 +308,51 @@
 
 <script src="../../vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/main.js"></script>
+
+	<script> //자동차 결함신고 버튼 클릭시 
+	function handleSubmit() {
+	    // 필수 입력값 체크
+	    const name = document.getElementById("name").value.trim();
+	    const birth = document.getElementById("residentId").value.trim();
+	    const phone = document.getElementById("mobile_number").value.trim();
+	    const address = document.getElementById("addrBase").value.trim();
+	    const password = document.getElementById("password").value.trim();
+	    const carNumber = document.getElementById("vehicleNumber").value.trim();
+	    const carModel = document.getElementById("car_model").value.trim();
+	    const carMaker = document.getElementById("car_manufacturer").value.trim();
+
+	    if (!name || !birth || !phone || !address || !password || !carNumber || !carModel || !carMaker) {
+	        alert("내용을 입력하셔야 합니다");
+	        return;
+	    }
+
+	    // 폼 제출
+	    document.querySelector("form").submit();
+
+	    // defect_reports 페이지로 이동
+	    window.location.href = "defect_reports_ok"; // URL은 실제 경로에 맞게 수정
+	}
+	</script>
+	
+
+
+<script>//비밀번호 눈태그 스크립트
+function togglePassword() {
+    const passwordInput = document.getElementById("password");
+    const eyeIcon = document.getElementById("eyeIcon");
+
+    if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        eyeIcon.classList.remove("ion-eye");
+        eyeIcon.classList.add("ion-eye-disabled");
+    } else {
+        passwordInput.type = "password";
+        eyeIcon.classList.remove("ion-eye-disabled");
+        eyeIcon.classList.add("ion-eye");
+    }
+}
+</script>
+
 <script>
 function formatAndStorePhone() {//휴대전화번호 스크립트
   const input = document.getElementById("cellular_display");

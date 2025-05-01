@@ -11,5 +11,6 @@
 		<mapper resource="mybatis/mappers/defect.xml"/>
 		<mapper resource="mybatis/mappers/defectList.xml"/>
 		<mapper resource="mybatis/mappers/recallstatic.xml"/>
+		<mapper resource="mybatis/mappers/faqann.xml"/>
 	</mappers>
 </configuration>

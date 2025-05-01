@@ -10,6 +10,16 @@
 			values(#{id},#{reporter_name},#{birth_date},#{mobile_number},#{phone_number},#{address},#{password},#{visibility},#{report_type},#{car_registration_number},#{car_model},#{car_manufacturer},#{car_manufacturing_date});
     </insert>
     
+    <select id="selectDefectreport" resultType="com.boot.dto.Defect_ReportsDTO">
+		select id,car_manufacturer,car_model from defect_reports where id=#{id}
+    </select>
+    
+    <insert id="insertDefectDetails">
+		insert into defect_details(id,product_name,manufacturer,manufacturing_period,model_name,recall_type,contact_info,additional_info)
+			values(#{id},#{product_name},#{manufacturer},#{manufacturing_period},#{model_name},#{recall_type},#{contact_info},#{additional_info});
+    </insert>
+    
+    
     
 
     

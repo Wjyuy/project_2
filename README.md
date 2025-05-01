@@ -33,10 +33,14 @@
 - `recallstatic.xml` (➕)
   - 👉 PageServiceImpl: XML 파일 형식을 List로 변환하는 메소드 포함
 
+------------------------------------
+
 - `announce.jsp` (➕)
 - `notice.jsp` (➕)
 - `AnnounceController` (➕)
 - `NoticeController` (➕)
+
+------------------------------------
 
 - `defect_reports.jsp` (➕)
 - `defect_reports_ok.jsp` (➕)
@@ -89,9 +93,13 @@
 - `RecallService` (✏️)
 - `RecallServiceImpl` (✏️)
 
+------------------------------------
+
 - `defect_reports.jsp` (✏️)
 - `defect_reports_ok.jsp` (✏️)
 - `DefectController` (✏️)
+
+------------------------------------
 
 - `Criteria ` (✏️)
 - `DefectListController` (➕)
@@ -140,21 +148,33 @@
    - API 호출 방식으로 유지
 
 - **Front-End** (`전체 jsp 단`)
-  - 📌TODO : header ,footer 링크걸기 
-   통계사이트 링크 : recall_statics_month
+  - ✅ header 테스트용으로 완료 -> announce 에 있음, 📌 TODO : 다른페이지들에도 적용할예정 
+  - 📌 TODO : footer 링크걸기 
    전국 리콜 현황 링크 : recall_list 
    id=aaa a href=#aaa 걸면 화면 움직이는거 가능 (넣을지 말지 고민)
-   메인화면 제작필요(이것저것 넣은 페이지? 음.. 고민)
+   announce_write 가는 버튼(관리자용)
 
-- **결함신고 페이지** (`defect_reports.jsp`)
-  - 📌TODO : 버튼 클릭시 select된 내용 가지고와서 검수완료시-> detail table 에 insert되도록 기능구현 
-  - 📌TODO : 프론트단 내일 할 예정 
+- **결함신고 페이지** (`defect_report.jsp,defect_details_check.jsp`)
+  - ✅ 비밀번호 눈아이콘(적은 입력값 볼수있도록)
+  - ✅ 자동차 결함신고 클릭시 폼제출및 조건달기(필히입력 전부-> 페이지이동)
+  - ✅ 전화번호,휴대전화 형식, 비밀번호 정규식
+
+  - ✅ 1.검색버튼 - defect_report table value값 가져오기
+  - ✅ 2.검수완료 submit 및 defect_details input
+  - ✅ 3.기간 형식 '240101~240505' 바꾸기
+  - ✅ 4.contactinfo - select option태그값 형식 같이출력
+    ex> [벤츠 코리아] 대표번호 : 000-0000
+
+  - 📌TODO : 프론트단 index와 announce 비교하면서 적용예정
+   관리자 페이지로 가는 defect_report _ok 필요하면 추후 경로수정 가능
 
 - **신고내역조회 페이지** (`defectList.jsp`)
   - 📌Todo : 리스트에서 클릭시 이동할 게시글(defect_view) 만들 예정
 
-- **게시판 동작 프론트단 제작** (`announce.jsp,notice.jsp`)
-  - 📌Todo : 백앤드 구현 
+- **게시판 동작 프론트단 제작** (`announce.jsp,notice.jsp,announce_view.jsp`)
+  - ✅ announce , announce_write 프론트 마무리
+  - ✅ announce , announce_write 백앤드 구현 (insert, list, 페이징, 서치까지 완료)
+  - ✅ announce_view 추가 구현 ( 내용 나오고, 다음페이지 이전페이지 )
   
 #### 🛠️ 추가 및 수정된 파일 목록
 
@@ -166,6 +186,36 @@
 - `RecallService` (✏️)
 - `RecallServiceImpl` (✏️)
 - `RecallStaticDAO` (✏️)
+- `recallstatic.xml` ()
+
+- `announce_view.jsp` (➕)
+- `announce_write.jsp` (➕)
+- `announce.jsp` (상단바 적용 완료!✏️)
+- `notice_write.jsp` (➕)
+- `notice.jsp` (✏️)
+- `NoticeController` (✏️)
+- `AnnounceController` (✏️)
+
+- `AnnounceDTO` (➕)
+- `FaqsDTO` (➕)
+- `mybatis-config` (✏️)
+- `FaqannServiceImpl` (➕)
+- `FaqannService` (➕)
+- `FaqannService` (➕)
+- `faqann.xml` (➕)
+- `FaqannDAO` (➕)
+- `main.jsp` (➕)
+
+------------------------------------
+
+- `defect_reports.jsp` (✏️)
+- `defect_details_check.jsp` (✏️)
+- `defect_reports_ok.jsp` (✏️)
+- `DefectController.java` (✏️)
+- `DefectDAO.java` (✏️)
+- `DefactService.java` (✏️)
+- `DefactServiceImpl.java` (✏️)
+- `defect.xml` (✏️)
 
 #### 📌 내일 예정
 
