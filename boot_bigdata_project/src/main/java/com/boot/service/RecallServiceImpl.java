@@ -25,7 +25,9 @@ import com.boot.dao.BoardAttachDAO;
 import com.boot.dao.PageDAO;
 import com.boot.dao.RecallStaticDAO;
 import com.boot.dto.Criteria;
+import com.boot.dto.DefectReportSummaryDTO;
 import com.boot.dto.Defect_DetailsDTO;
+import com.boot.dto.ManufacturerRecallDTO;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -133,12 +135,43 @@ public class RecallServiceImpl implements RecallService{
 	}
 
 	@Override
-	public int getdefect_reports_count(Integer startYear, Integer endYear) {
-		Map<String, Object> params = new HashMap<>();
-		
+    public DefectReportSummaryDTO getDefectReportSummary(Map<String, Object> paramMap) {
 		RecallStaticDAO dao = sqlSession.getMapper(RecallStaticDAO.class);
-	    params.put("start_year", startYear);
-	    params.put("end_year", endYear);
-	    return dao.getdefect_reports_count(params);
+        return dao.getdefect_reports_count(paramMap);
+    }
+	
+	@Override
+	public List<DefectReportSummaryDTO> getDefectReportSummaryByYear(Map<String, Object> paramMap) {
+		RecallStaticDAO dao = sqlSession.getMapper(RecallStaticDAO.class);
+	    return dao.getDefectReportSummaryByYear(paramMap);
 	}
+
+	@Override
+    public List<ManufacturerRecallDTO> getYearlyRecallStats(int startYear, int endYear) {
+		RecallStaticDAO dao = sqlSession.getMapper(RecallStaticDAO.class);
+        return dao.getYearlyRecallStats(startYear, endYear);
+    }
+
+	@Override
+	public List<DefectReportSummaryDTO> getDefectReportSummaryByMonth(Map<String, Object> paramMap) {
+		log.info("paramMap =>"+paramMap);
+		RecallStaticDAO dao = sqlSession.getMapper(RecallStaticDAO.class);
+		return dao.getDefectReportSummaryByMonth(paramMap);
+	}
+
+	@Override
+	public List<ManufacturerRecallDTO> getYearlyRecallStatsByMonth(Map<String, Object> paramMap) {
+		log.info("paramMap =>"+paramMap);
+		RecallStaticDAO dao = sqlSession.getMapper(RecallStaticDAO.class);
+		return dao.getYearlyRecallStatsByMonth(paramMap);
+	}
+	
+//	public Map<String, Object> getdefect_reports_count(Integer startYear, Integer endYear,Map<String, Object> params){
+////	public int getdefect_reports_count(Integer startYear, Integer endYear) {
+//		RecallStaticDAO dao = sqlSession.getMapper(RecallStaticDAO.class);
+////		RecallStaticDAO dao = sqlSession.getMapper(RecallStaticDAO);
+//	    params.put("start_year", startYear);
+//	    params.put("end_year", endYear);
+//	    return dao.getdefect_reports_count(params);
+//	}
 }

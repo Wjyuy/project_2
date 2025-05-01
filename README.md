@@ -84,6 +84,7 @@
 
 - `DefectReportSummaryDTO` (➕)
 - `recallstatic.xml` (➕)
+- `RecallStaticDAO` (➕)
 - `RecallController` (✏️)
 - `RecallService` (✏️)
 - `RecallServiceImpl` (✏️)
@@ -130,10 +131,20 @@
 
 <br>
 
-- **전국 리콜 통계** (`recall_statics.jsp`)
-  - 📌TODO : 월별, 리콜현황, 결함신고 기능 구현 필요
+- **전국 리콜 통계** (`recall_statics_month.jsp`)
+  - ✅ 월별 리콜 통계 신고 현황,제조사별,그래프 구현 완료
+  - ✏️ 리콜현황-월별 리콜현황-연도별로 구성
+  - ✅ recall_statics -> recall_statics_year 이름 변경
 
-  - 📌TODO : 전국 리콜 현황 전체보기(29일 만든 것) DB형식으로 교체 필요
+   ~~전국 리콜 현황 전체보기(29일 만든 것) DB형식으로 교체~~
+   - API 호출 방식으로 유지
+
+- **Front-End** (`전체 jsp 단`)
+  - 📌TODO : header ,footer 링크걸기 
+   통계사이트 링크 : recall_statics_month
+   전국 리콜 현황 링크 : recall_list 
+   id=aaa a href=#aaa 걸면 화면 움직이는거 가능 (넣을지 말지 고민)
+   메인화면 제작필요(이것저것 넣은 페이지? 음.. 고민)
 
 - **결함신고 페이지** (`defect_reports.jsp`)
   - 📌TODO : 버튼 클릭시 select된 내용 가지고와서 검수완료시-> detail table 에 insert되도록 기능구현 
@@ -141,11 +152,26 @@
 
 - **신고내역조회 페이지** (`defectList.jsp`)
   - 📌Todo : 리스트에서 클릭시 이동할 게시글(defect_view) 만들 예정
+
+- **게시판 동작 프론트단 제작** (`announce.jsp,notice.jsp`)
+  - 📌Todo : 백앤드 구현 
   
 #### 🛠️ 추가 및 수정된 파일 목록
 
+- `DefectReportSummaryDTO` (report_month추가✏️)
+- `ManufacturerRecallDTO` (report_month추가✏️)
+- `recall_statics_month.jsp` (➕)
+- `recall_statics_year.jsp` (recall_statics에서 이름 변경✏️)
+- `RecallController` (✏️)
+- `RecallService` (✏️)
+- `RecallServiceImpl` (✏️)
+- `RecallStaticDAO` (✏️)
 
 #### 📌 내일 예정
 
+- 시간 남으면 소스트리 공부
+- 🐞디버그 픽스
+- 📚시연영상 촬영
+- 📝서류 작업
 
 </details>

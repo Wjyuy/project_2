@@ -149,8 +149,11 @@
         <div class="container">
           <div class="row d-flex justify-content-center text-center">
             <div class="col-lg-8">
-              <h1>recall_list Page</h1>
-              <p class="mb-0">한국어테스트 Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.</p>
+              <h1>전국 리콜 현황</h1>
+              <p class="mb-0">
+				최근 국내에서 발생한 자동차 리콜 정보를 한눈에 확인할 수 있는 리콜 현황 표입니다.
+			  	제조사별로 리콜 대상 차량의 모델명, 제조 기간, 리콜 사유 및 진행 방식 등을 상세히 안내하며, 리콜 유형(자발적/강제)과 문의 가능한 대표 연락처도 함께 제공됩니다.
+			  </p>
             </div>
           </div>
         </div>
@@ -241,12 +244,7 @@
 		  
 		</section><!-- /Blog Pagination Section -->
 		
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
       </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up">
-        <p>Use this page as a starter for your own custom pages.</p>
-      </div>
 
     </section><!-- /Starter Section Section -->
 
