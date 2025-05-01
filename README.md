@@ -69,7 +69,8 @@
 - **결함신고 페이지** (`defect_reports.jsp`)
   - ✅ defect_reports.jsp : insert기능 보완(엉성했던 파트 수정)
   - `DefectController : detail부분 추가
-  - defect_details_check.jsp : 관리자가defect_reports검수하고 진행중 
+  - defect_details_check.jsp : 관리자가defect_reports검수하고 진행중
+  - 📌TODO : 버튼 클릭시 select된 내용 가지고와서 검수완료시-> detail table 에 insert되도록 기능구현 
   - 📌TODO : 프론트단 내일 할 예정 
 
 - **신고내역조회 페이지** (`defectList.jsp`)
@@ -119,5 +120,32 @@
 - 🎨프론트 마무리
 - 📚시연영상 촬영
 - 📝서류 작업
+
+</details>
+
+<details>
+
+
+<summary>📅 2025/05/01 작업 내용</summary>
+
+<br>
+
+- **전국 리콜 통계** (`recall_statics.jsp`)
+  - 📌TODO : 월별, 리콜현황, 결함신고 기능 구현 필요
+
+  - 📌TODO : 전국 리콜 현황 전체보기(29일 만든 것) DB형식으로 교체 필요
+
+- **결함신고 페이지** (`defect_reports.jsp`)
+  - 📌TODO : 버튼 클릭시 select된 내용 가지고와서 검수완료시-> detail table 에 insert되도록 기능구현 
+  - 📌TODO : 프론트단 내일 할 예정 
+
+- **신고내역조회 페이지** (`defectList.jsp`)
+  - 📌Todo : 리스트에서 클릭시 이동할 게시글(defect_view) 만들 예정
+  
+#### 🛠️ 추가 및 수정된 파일 목록
+
+
+#### 📌 내일 예정
+
 
 </details>
