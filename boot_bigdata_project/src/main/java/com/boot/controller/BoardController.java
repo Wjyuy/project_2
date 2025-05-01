@@ -34,16 +34,6 @@ public class BoardController {
 	@Autowired
 	private UploadService uploadService;
 
-//	@RequestMapping("/list")
-	@RequestMapping("/list_old")
-	public String list(Model model) {
-		log.info("@# list()_old");
-		
-		ArrayList<BoardDTO> list = service.list();
-		model.addAttribute("list", list);
-		
-		return "list";
-	}
 	
 	@RequestMapping("/write")
 //	public String write(@RequestParam HashMap<String, String> param) {
