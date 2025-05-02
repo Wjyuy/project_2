@@ -126,7 +126,8 @@ made by. team_KH리콜안전공단
 ### 결함신고
 <br>
 ![통계](./images/결함신고10.png)
-'defect_reports.jsp'
+
+`defect_reports.jsp`
 - 좌측 상단에 홈페이지 명(로고)출력
 - 상단에 목록 구현
 - 페이지 중앙에 입력폼 작성
@@ -141,14 +142,14 @@ made by. team_KH리콜안전공단
 ### 결함신고 완료
 <br>
 ![통계](./images/신청완료11.png)
-'defect_reports_ok.jsp'
+`defect_reports_ok.jsp`
 - 좌측 상단에 홈페이지 명(로고)출력
 - 상단에 목록 구현
 - 페이지 중앙에 확인폼 작성
 - 페이지 하단에 기본 목록태그 정리및 링크연결
 <br>
 
-`기능`
+- `기능`
 - 완료시 메인페이지 이동
 - 신고후 리스트 확인페이지 이동
 <br>
