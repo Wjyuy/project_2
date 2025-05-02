@@ -219,20 +219,20 @@
 	       <nav id="navmenu" class="navmenu">
 	         <ul>
 	           <li><a href="recall_list">리콜정보</a></li>
-			<li class="dropdown"><a href="defect_reports"><span>결함신고</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+			<li class="dropdown"><a href="#"><span>결함신고</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
 	             <ul>
 	               <li><a href="defect_reports">결함신고</a></li>
 	               <li><a href="defectList">신고내역조회</a></li>
 	             </ul>
 	           </li>
-			<li class="dropdown"><a href="defect_reports"><span>리콜센터</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+			<li class="dropdown"><a href="#"><span>리콜센터</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
 	             <ul>
 	               <li><a href="announce">공지사항</a></li>
 	               <li><a href="notice">FAQ</a></li>
 	             </ul>
 	           </li>
 	           <li><a href="recall_statics_year">리콜통계</a></li>
-			<li class="dropdown"><a href="defect_reports"><span>관리자</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+			<li class="dropdown"><a href="#"><span>관리자</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
 	             <ul>
 	               <li><a href="defect_details_check">리콜정보검수</a></li>
 	               <li><a href="announce_write">공지사항작성</a></li>
@@ -267,8 +267,8 @@
         <div class="container">
           <ol>
             <li><a href="main">차량리콜도우미</a></li>
-            <li><a href="defect_details_check">리콜정보검수</a></li>
-            <li class="current">정보 입력</li>
+            <li><a href="defectList">신고내역조회</a></li>
+            <li class="current">결함신고</li>
           </ol>
         </div>
       </nav>
@@ -279,7 +279,7 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2 class="title">신고 내역</h2>
+        <h2 class="title">정보 입력</h2>
 		
 		<div class="widgets-container" style="text-align: center;">
 		    <form action="insertDefect" method="post" class="uk-form-stacked">
@@ -362,7 +362,7 @@
 						    <th class="th">비밀번호<i class="ion-ios7-checkmark-empty"></i></th>
 						    <td class="td">
 								<div style="position: relative; display: inline-block;">
-								    <input id="password" name="password" class="uk-input uk-form-width-medium reqed" style="padding-right: 30px;"  title="비밀번호" type="password">
+								    <input id="password" name="password" class="uk-input uk-form-width-medium reqed" oninput="validatePassword()" style="padding-right: 30px;"  title="비밀번호" type="password">
 								    <button type="button" onclick="togglePassword()" 
 								            style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; padding: 0;">
 								        <i id="eyeIcon" class="ion-ios-eye" style="color: black;"></i>
