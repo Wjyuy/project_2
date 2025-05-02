@@ -5,12 +5,14 @@ made by. team_KH리콜안전공단
 
 <details>
 <summary>기능 설명</summary>
+
 ## 메인 페이지
 ![메인 페이지](./images/main.png)
 
 - 사용자 친화적인 인터페이스 제공
 - 리콜 정보 검색 기능
 - 연도별/제조사별 통계 차트 표시
+![한국어테스트](./images/2메인페이지스크롤.png)
 
 </details>
 
