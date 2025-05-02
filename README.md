@@ -157,9 +157,8 @@ made by. team_KH리콜안전공단
 - 신고후 리스트 확인페이지 이동
 <br>
 ### 리콜정보검수
-<br>
 
-![결함신고](./images/리콜 정보 검수12.png)
+![결함신고](./images/리콜_정보_검수12.png)
 
 'defect_details_check.jsp'
 - 좌측 상단에 홈페이지 명(로고)출력
