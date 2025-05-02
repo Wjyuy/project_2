@@ -125,6 +125,7 @@ made by. team_KH리콜안전공단
 
 ### 결함신고
 <br>
+
 ![결함신고](./images/결함신고10.png)
 
 `defect_reports.jsp`
@@ -141,7 +142,9 @@ made by. team_KH리콜안전공단
  
 ### 결함신고 완료
 <br>
+
 ![결함신고](./images/신청완료11.png)
+
 `defect_reports_ok.jsp`
 - 좌측 상단에 홈페이지 명(로고)출력
 - 상단에 목록 구현
@@ -155,6 +158,7 @@ made by. team_KH리콜안전공단
 <br>
 ### 리콜정보검수
 <br>
+
 ![결함신고](./images/리콜 정보 검수12.png)
 
 'defect_details_check.jsp'
@@ -169,7 +173,7 @@ made by. team_KH리콜안전공단
 - 회사 옵션태그 사용시 해당 회사 번호 자동입력
 - 검수완료시 리콜통계 테이블에 데이터 입력
 - 검수완료시 리콜통계페이지 이동
-<br>
+- <br>
 
 ### 결함신고내역조회
 <br>
