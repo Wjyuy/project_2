@@ -24,7 +24,7 @@
     </select>
 
     <update id="modify">
-    	update defect_reports set report_type=#{report_type}, car_model=#{car_model}, car_manufacturer=#{car_manufacturer}, car_manufacturing_date=#{car_manufacturing_date} where id=#{id}
+    	update defect_reports set report_type=#{report_type}, car_model=#{car_model}, car_manufacturer=#{car_manufacturer} where id=#{id}
     </update>
 
     <update id="delete">
