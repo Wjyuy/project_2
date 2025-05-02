@@ -61,7 +61,7 @@ public class DefectController {
 		
 		defactservice.insertDefectDetails(defect_DetailsDTO);
 		
-		return "redirect:defect_detail";
+		return "redirect:main";
 	}
 	
 
