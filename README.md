@@ -122,10 +122,10 @@ made by. team_KH리콜안전공단
 - 공지사항 작성 기능
 - 작성시간 자동으로 값 선택됨
 <br>
+
 ### 결함신고
 <br>
 ![통계](./images/결함신고10.png)
-<br>
 'defect_reports.jsp'
 -좌측 상단에 홈페이지 명(로고)출력
 -상단에 목록 구현
@@ -141,7 +141,6 @@ made by. team_KH리콜안전공단
 ### 결함신고 완료
 <br>
 ![통계](./images/신청완료11.png)
-<br>
 'defect_reports_ok.jsp'
 -좌측 상단에 홈페이지 명(로고)출력
 -상단에 목록 구현
@@ -156,7 +155,6 @@ made by. team_KH리콜안전공단
 ### 리콜정보검수
 <br>
 ![통계](./images/리콜 정보 검수12.png)
-<br>
 
 'defect_details_check.jsp'
 -좌측 상단에 홈페이지 명(로고)출력
