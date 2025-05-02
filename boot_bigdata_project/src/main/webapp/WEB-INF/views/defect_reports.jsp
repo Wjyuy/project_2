@@ -362,7 +362,7 @@
 						    <th class="th">비밀번호<i class="ion-ios7-checkmark-empty"></i></th>
 						    <td class="td">
 								<div style="position: relative; display: inline-block;">
-								    <input id="password" name="password" class="uk-input uk-form-width-medium reqed" style="padding-right: 30px;"  title="비밀번호" type="password">
+								    <input id="password" name="password" class="uk-input uk-form-width-medium reqed" oninput="validatePassword()" style="padding-right: 30px;"  title="비밀번호" type="password">
 								    <button type="button" onclick="togglePassword()" 
 								            style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; padding: 0;">
 								        <i id="eyeIcon" class="ion-ios-eye" style="color: black;"></i>

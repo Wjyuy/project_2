@@ -424,8 +424,6 @@ footer/header/ol li 링크 적용 완료
 - `notice_write.jsp` 버튼수정
 - `main.jsp` 제작완료
 - `AnnounceController` (메인에 faq 추가)
-- `DefectController` main 이동 수정
-- `defectList.xml` 버그수정
 
 <이미지 업로드>
 image1~2
@@ -438,5 +436,8 @@ image3 ~ 10
 - 🐞마지막 디버깅
  - ✅임포트 정리
  - `defectList.xml` modify 수정
+ - `defect_reports.jsp` 비밀번호 수정
+ - `DefectController` main 이동 수정
+- `defectList.xml` 버그수정
 
 </details>
