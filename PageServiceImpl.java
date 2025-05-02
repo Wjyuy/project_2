@@ -33,26 +33,7 @@ public class PageServiceImpl implements PageService{
 		return defectList;
 	}
 	
-//	@Override
-//	public ArrayList<BoardDTO> listWithPaging(Criteria cri) {
-//		log.info("@# PageServiceImpl listWithPaging");
-//		log.info("@# cri"+cri);
-//		
-//		PageDAO dao=sqlSession.getMapper(PageDAO.class);
-//		ArrayList<BoardDTO> list = dao.listWithPaging(cri);
-//		
-//		return list;
-//	}
 
-//	@Override
-//	public int getTotalCount() {
-//		log.info("@# PageServiceImpl getTotalCount");
-//		
-//		PageDAO dao=sqlSession.getMapper(PageDAO.class);
-//		int total = dao.getTotalCount();
-//		
-//		return total;
-//	}
 
 	@Override
 	public int getTotalCount(Criteria cri) {

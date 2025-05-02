@@ -13,10 +13,13 @@ import lombok.NoArgsConstructor;
 public class DefectListDTO {
 	private int id;
 	private String reporter_name;
+	private String password;
 	private String car_model;
 	private String report_type;
 	private Timestamp report_date;
+	private String car_manufacturer;
+	private Timestamp car_manufacturing_date;
 	
-//	private List<BoardAttachDTO> attachList;
+	
 	
 }

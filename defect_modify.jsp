@@ -58,37 +58,41 @@
   .table-custom tr:nth-child(even) {
     background-color: #f9f9f9;
   }
+.buttons{
+  position: relative;
+  text-align: center;
+  margin-top: 30px;
+}
+.buttonCenter{
+margin-left: 20px;
+}
+.rightButton{
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 38px;
+  line-height: 38px;;
+  padding: 0 16px;
 
-  .table-custom tr:hover {
-    background-color: #f1f1f1;
-  }
-  button{
+}
+  .buttons input{
 	background-color: #00796b;
 	color: white;
 	border: none;
 	padding: 0PX 16PX;
 	cursor: pointer;
+  font-size: large;
   }
-  button:hover{
+  .buttons input:hover{
 	background-color: #1a5739;
   }
-  input, select, button{
+  .buttons input{
 	height: 38PX;
 	line-height: 38PX;
 	vertical-align: middle;
 	box-sizing: border-box;
   }
   </style>
-  <script src="${pageContext.request.contextPath}/js/jquery.js"></script>
-  <script>
-	  $(document).on("click", ".paginate_button a", function(e) {
-		e.preventDefault(); 
-		    const page = $(this).attr("href"); 
-		    $("#actionForm").find("input[name='pageNum']").val(page);
-		    console.log("@#페이징>" + page);
-		    $("#actionForm").submit(); 
-	  });
-  </script>
 </head>
 
 <body class="starter-page-page">
@@ -170,7 +174,7 @@
       <nav class="breadcrumbs">
         <div class="container">
           <ol>
-            <li><a href="main">차량리콜도우미</a></li>
+            <li><a href="index.html">홈</a></li>
             <li class="current">신고내역조회</li>
           </ol>
         </div>
@@ -185,110 +189,79 @@
         <h2 class="title">신고 내역</h2>
 		
 		<div class="widgets-container">
-				<form method="get" id="searchForm">
-								<select name="type">
-									<option value=""<c:out value="${pageMaker.cri.type == null ? 'selected':''}"></c:out>>전체</option>
-									<option value="T"<c:out value="${pageMaker.cri.type eq 'T' ? 'selected':''}"></c:out>>모델명</option>
-									<option value="C"<c:out value="${pageMaker.cri.type eq 'C' ? 'selected':''}"></c:out>>신고 유형</option>
-									<option value="W"<c:out value="${pageMaker.cri.type eq 'W' ? 'selected':''}"></c:out>>신고자</option>
-									
-								</select>
-
-<!--								 Criteria 이용해서 키워드 값을 넘김  -->
-								<input type="text" name="keyword" value="${pageMaker.cri.keyword}">
-
-			          
-								&nbsp;신고일
-								<input type="date" name="reportDate" value="${pageMaker.cri.reportDate}"/>
-								
-			        
-
-<!--								 pagemaker 값도 가져간다 -->
-								 <input type="hidden" name="pageNum" value="${pageMaker.cri.pageNum}"> 
-<!--								 전체검색중 5ㅠ페이지에서 22 키워드로 검색시 안나올때 처리 -->
-								<input type="hidden" name="pageNum" value="1">
-								<input type="hidden" name="amount" value="${pageMaker.cri.amount}">
-
-								<button>Search</button>
-
-								
-								
-							</form>
-
-			<!--리콜정보 출력-->
-			<form id="actionForm" action="defectList" method="get">
-			    <input type="hidden" name="pageNum" value="${pageMaker.cri.pageNum}">
-			    <input type="hidden" name="amount" value="${pageMaker.cri.amount}">
-			    <input type="hidden" name="type" value="${pageMaker.cri.type}">
-			    <input type="hidden" name="keyword" value="${pageMaker.cri.keyword}">
-			    <input type="hidden" name="reportDate" value="${pageMaker.cri.reportDate}">
-			</form>
-			<table class="table-custom">
-				<tr>
-							<td>번호</td>
-							<td>신고자</td>
-							<td>신고유형</td>
-							<td>모델명</td>
-							<td>신고일</td>
 				
-						</tr>
-						<c:forEach var="dto" items="${defectList}">
-							<tr onclick="location.href='defect_view?id=${dto.id}'">
-								
-								<td>${dto.id}</td>
-								<td>${dto.reporter_name}</td>
-								<td>${dto.report_type}</td>
-								<td>
-								 
-									${dto.car_model}
-								</td>
-								<td>${dto.report_date}</td>
-							
-							</tr>
-						</c:forEach>
 
-						
-						
-			</table>
-		</div>
-		
+			<table class="table-custom" width="500" border="1">
+				<form method="post" action="modify">
+					<input type="hidden" name="id" value="${defect_modify.id}">
 
-		<!-- Blog Pagination Section -->
-		<section id="blog-pagination" class="blog-pagination section">
+					<tr>
+						<td>번호</td>
+						<td>
+							${defect_modify.id}
+						</td>
+						<td>신고자</td>
+						<td>
+							 ${defect_modify.reporter_name}
+						</td>
+						<td>신고일</td>
+						<td>
+							 ${defect_modify.report_date} 
+						</td>
 
-		  <div class="container">
-		    <div class="d-flex justify-content-center">
-			    <div class="div_page">
-			      <ul>
-					<c:if test="${pageMaker.prev}">
-			        	<li class="paginate_button"><a href="${pageMaker.startPage -1}"><i class="bi bi-chevron-left"></i></a></li>
-					</c:if>
-					
-					<c:forEach var="num" begin="${pageMaker.startPage}" end="${pageMaker.endPage}">
-						<li class="paginate_button">
-					        <a href="${num}" 
-					           class="${pageMaker.cri.pageNum eq num ? 'active' : ''}">
-					           ${num}
-					        </a>
-					    </li>
-<!--			        <li><a href="#" class="active">2</a></li>-->
-					</c:forEach>		
-					<c:if test="${pageMaker.next}">
-			        	<li class="paginate_button"><a href="${pageMaker.endPage +1}"><i class="bi bi-chevron-right"></i></a></li>
-					</c:if>
-			      </ul>
-			  </div>
-		    </div>
-		  </div>
-
-		  
-		</section><!-- /Blog Pagination Section -->
-		
+					</tr>
+					<tr>
+						<td colspan="4"></td>
+						<td>차량 제조일자</td>
+					<td>
+						 ${defect_modify.car_manufacturing_date} 
+					</td>
+					</tr>
+        </table>
+        <br>
+        <hr>
+        <br>
+        <table class="table-custom" border="1">
+			<input type="hidden" name="id" value="${defect_modify.id}">
+					<tr>
+						<td width="100" height="80">신고유형</td>
+						<td>
+								<input type="text" name="report_type" class="form-control" value="${defect_modify.report_type}">
+						</td>
+           
+					</tr>
+					<tr>
+						<td width="100" height="80">모델명</td>
+						<td>
+								<input type="text" name="car_model" class="form-control" value="${defect_modify.car_model}">
+						</td>
         
-      </div><!-- End Section Title -->
+					</tr>
+					<tr>
+						<td width="100" height="80">제조사</td>
+						<td>
+								<input type="text" name="car_manufacturer" class="form-control" value="${defect_modify.car_manufacturer}">
+						</td>
+            
+					</tr>
+
+
+        </table>
+        <div class="buttons">
+          <div class="buttonCenter">
+          <input type="submit" value="수정">
+          &nbsp;<input type="submit" value="삭제" formaction="delete">
+          </div>
+
+          <input type="submit" class="rightButton" value="목록보기" formaction="defectList">
+        </div>
+
+
+      </form>
+    </section><!-- /Starter Section Section -->
+
 
      
-    </section><!-- /Starter Section Section -->
 
 	
   </main>
@@ -355,49 +328,29 @@
 
     </footer>
 
-    <!-- Scroll Top -->
-    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-    <!-- Preloader -->
-    <div id="preloader"></div>
+  <!-- Preloader -->
+  <div id="preloader"></div>
 
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-  <script>  //Search 버튼 클릭
-  $("#searchForm button").on("click",function () {
-  	// alert("검색");
-
-  	//키워드 입력 받을 조건
-  	if (searchForm.find("option:selected").val() !=""&& !searchForm.find("input[name='keyword']"&& !searchForm.find("input[name='reportDate']").val()) {
-  		alert("키워드를 입력하세요.");
-  		return false;
-  	}
-  	searchForm.attr("action","defectList").submit();
-  })//end of searchForm click
-
-  //type 콤보박스 변경
-  $("#searchForm select").on("change",function () {
-  	//전체일때
-  	if (searchForm.find("option:selected").val()=="") {
-  		//키워드를 널값으로 변경
-  		searchForm.find("input[name='keyword']").val("");
-  	}
-  });//end of searchForm click
-  
-
-  </script>
+ 
 
   
+
+
 </body>
 
 </html>
