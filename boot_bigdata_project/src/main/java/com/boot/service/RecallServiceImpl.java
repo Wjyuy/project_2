@@ -6,7 +6,6 @@ import java.io.StringReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -21,8 +20,6 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 
-import com.boot.dao.BoardAttachDAO;
-import com.boot.dao.PageDAO;
 import com.boot.dao.RecallStaticDAO;
 import com.boot.dto.Criteria;
 import com.boot.dto.DefectReportSummaryDTO;

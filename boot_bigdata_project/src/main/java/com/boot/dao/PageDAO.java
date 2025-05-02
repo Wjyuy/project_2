@@ -1,11 +1,9 @@
 package com.boot.dao;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
-import org.apache.ibatis.annotations.Mapper;
-
-import com.boot.dto.*;
+import com.boot.dto.Criteria;
+import com.boot.dto.DefectListDTO;
 
 public interface PageDAO {
 	public ArrayList<DefectListDTO> listWithPaging(Criteria cri);

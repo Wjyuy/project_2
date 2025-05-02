@@ -10,14 +10,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.boot.dto.AnnounceDTO;
-import com.boot.dto.BoardDTO;
-import com.boot.dto.CommentDTO;
 import com.boot.dto.Criteria;
-import com.boot.dto.DefectListDTO;
 import com.boot.dto.FaqsDTO;
 import com.boot.dto.PageDTO;
 import com.boot.service.FaqannService;
-import com.boot.service.PageService;
 
 import lombok.extern.slf4j.Slf4j;
 

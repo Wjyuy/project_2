@@ -1,9 +1,9 @@
 package com.boot.service;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
-import com.boot.dto.*;
+import com.boot.dto.Criteria;
+import com.boot.dto.DefectListDTO;
 
 public interface PageService {
 	public ArrayList<DefectListDTO> listWithPaging(Criteria cri);

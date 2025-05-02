@@ -7,14 +7,9 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.boot.dao.BoardAttachDAO;
-import com.boot.dao.BoardDAO;
 import com.boot.dao.FaqannDAO;
-import com.boot.dao.PageDAO;
 import com.boot.dto.AnnounceDTO;
-import com.boot.dto.BoardDTO;
 import com.boot.dto.Criteria;
-import com.boot.dto.DefectListDTO;
 import com.boot.dto.FaqsDTO;
 
 import lombok.extern.slf4j.Slf4j;

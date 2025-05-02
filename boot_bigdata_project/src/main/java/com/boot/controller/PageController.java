@@ -7,7 +7,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.boot.dto.BoardDTO;
 import com.boot.dto.Criteria;
 import com.boot.dto.DefectListDTO;
 import com.boot.dto.PageDTO;

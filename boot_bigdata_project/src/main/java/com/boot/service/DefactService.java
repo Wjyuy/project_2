@@ -1,10 +1,9 @@
 package com.boot.service;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
-import com.boot.dto.*;
+import com.boot.dto.Defect_DetailsDTO;
+import com.boot.dto.Defect_ReportsDTO;
 
 public interface DefactService {
 	public void insertDefect(Defect_ReportsDTO defect_ReportsDTO);

@@ -4,18 +4,9 @@ import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 
-import com.boot.dao.BoardAttachDAO;
-import com.boot.dao.BoardDAO;
 import com.boot.dao.DefectDAO;
-import com.boot.dto.BoardAttachDTO;
 import com.boot.dto.Defect_DetailsDTO;
 import com.boot.dto.Defect_ReportsDTO;
 
