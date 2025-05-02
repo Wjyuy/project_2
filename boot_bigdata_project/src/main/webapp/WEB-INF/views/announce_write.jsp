@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>리콜 정보 출력</title>
+<title>차량리콜도우미</title>
 
 <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -141,47 +141,63 @@
 
 	<header id="header" class="header fixed-top">
 
-	  <div class="topbar d-flex align-items-center">
-	    <div class="container d-flex justify-content-center justify-content-md-between">
-	      <div class="contact-info d-flex align-items-center">
-	        <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">tjswls0147@naver.com</a></i>
-	        <i class="bi bi-phone d-flex align-items-center ms-4"><span>+051 1544-9970</span></i>
+	    <div class="topbar d-flex align-items-center">
+	      <div class="container d-flex justify-content-center justify-content-md-between">
+	        <div class="contact-info d-flex align-items-center">
+	          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">contact@example.com</a></i>
+	          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+051 1544-9970</span></i>
+	        </div>
+	        <div class="social-links d-none d-md-flex align-items-center">
+	          <a href="https://x.com/home" class="twitter"><i class="bi bi-twitter-x"></i></a>
+	          <a href="https://www.facebook.com" class="facebook"><i class="bi bi-facebook"></i></a>
+	          <a href="https://www.instagram.com" class="instagram"><i class="bi bi-instagram"></i></a>
+	          <a href="https://www.chatgpt.com" class="linkedin"><i class="bi bi-linkedin"></i></a>
+	        </div>
 	      </div>
-		  <div class="social-links d-none d-md-flex align-items-center">
-		     <a href="https://x.com/home" class="twitter"><i class="bi bi-twitter-x"></i></a>
-		     <a href="https://www.facebook.com" class="facebook"><i class="bi bi-facebook"></i></a>
-		     <a href="https://www.instagram.com" class="instagram"><i class="bi bi-instagram"></i></a>
-		     <a href="https://www.chatgpt.com" class="linkedin"><i class="bi bi-linkedin"></i></a>
-		   </div>
+	    </div><!-- End Top Bar -->
+
+	    <div class="branding d-flex align-items-cente">
+
+	      <div class="container position-relative d-flex align-items-center justify-content-between">
+	        <a href="main" class="logo d-flex align-items-center">
+	          <!-- Uncomment the line below if you also wish to use an image logo -->
+	           <img src="assets/img/hmm.png" alt=""> 
+	          <h1 class="sitename">차량 리콜 도우미</h1>
+	          <span>.</span>
+	        </a>
+
+	        <nav id="navmenu" class="navmenu">
+	          <ul>
+	            <li><a href="recall_list">리콜정보</a></li>
+				<li class="dropdown"><a href="defect_reports"><span>결함신고</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+	              <ul>
+	                <li><a href="defect_reports">결함신고</a></li>
+	                <li><a href="defectList">신고내역조회</a></li>
+	              </ul>
+	            </li>
+				<li class="dropdown"><a href="defect_reports"><span>리콜센터</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+	              <ul>
+	                <li><a href="announce">공지사항</a></li>
+	                <li><a href="notice">FAQ</a></li>
+	              </ul>
+	            </li>
+	            <li><a href="recall_statics_year">리콜통계</a></li>
+				<li class="dropdown"><a href="defect_reports"><span>관리자</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+	              <ul>
+	                <li><a href="defect_details_check">리콜정보검수</a></li>
+	                <li><a href="announce_write">공지사항작성</a></li>
+	              </ul>
+	            </li>
+				
+	          </ul>
+	          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+	        </nav>
+
+	      </div>
+
 	    </div>
-	  </div><!-- End Top Bar -->
 
-	  <div class="branding d-flex align-items-cente">
-
-	    <div class="container position-relative d-flex align-items-center justify-content-between">
-	      <a href="index.html" class="logo d-flex align-items-center">
-	        <!-- Uncomment the line below if you also wish to use an image logo -->
-	         <img src="assets/img/hmm.png" alt=""> 
-	        <h1 class="sitename">자동차리콜센터</h1>
-	        <span>.</span>
-	      </a>
-
-	      <nav id="navmenu" class="navmenu">
-	        <ul>
-	          <li><a href="#hero">결함신고<br></a></li>
-	          <li><a href="#about">리콜정보</a></li>
-	          <li><a href="#services">리콜제도</a></li>
-	          <li><a href="#portfolio">안전운전</a></li>
-	          <li><a href="#team">리콜센터</a></li>
-	        </ul>
-	        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-	      </nav>
-
-	    </div>
-
-	  </div>
-
-	</header>
+	  </header>
 	<main class="main">
   <!-- Contact Section -->
       <section id="contact" class="contact section">
@@ -275,70 +291,67 @@
 
 	  </main>
 
-    <footer id="footer" class="footer accent-background">
+	  <footer id="footer" class="footer accent-background">
 
-      <div class="container footer-top">
-        <div class="row gy-4">
-          <div class="col-lg-5 col-md-12 footer-about">
-            <a href="index.html" class="logo d-flex align-items-center">
-              <span class="sitename">자동차리콜센터</span>
-            </a>
-            <p>우)445-871 경기도 화성시 송산면 삼존로 200 한국교통안전공단 자동차안전연구원 Tel : 080-357-2500 Fax : 031-355-0027
-              본 홈페이지에 게시된 이메일 주소가 자동 수집되는 것을 거부하며, 이를 위반 시 정보통신망법에 의해 처벌됨을 유념하시기 바랍니다.</p>
-            <div class="social-links d-flex mt-4">
-              <a href=""><i class="bi bi-twitter-x"></i></a>
-              <a href=""><i class="bi bi-facebook"></i></a>
-              <a href=""><i class="bi bi-instagram"></i></a>
-              <a href=""><i class="bi bi-linkedin"></i></a>
-            </div>
-          </div>
+	      <div class="container footer-top">
+	        <div class="row gy-4">
+	          <div class="col-lg-5 col-md-12 footer-about">
+	            <a href="main" class="logo d-flex align-items-center">
+	              <span class="sitename">차량 리콜 도우미</span>
+	            </a>
+	            <p>우)445-871 경기도 화성시 송산면 삼존로 200 한국교통안전공단 자동차안전연구원 Tel : 080-357-2500 Fax : 031-355-0027
+	              본 홈페이지에 게시된 이메일 주소가 자동 수집되는 것을 거부하며, 이를 위반 시 정보통신망법에 의해 처벌됨을 유념하시기 바랍니다.</p>
+	            <div class="social-links d-flex mt-4">
+	              <a href="https://x.com/home"><i class="bi bi-twitter-x"></i></a>
+	              <a href="https://www.facebook.com"><i class="bi bi-facebook"></i></a>
+	              <a href="https://www.instagram.com"><i class="bi bi-instagram"></i></a>
+	              <a href="https://www.chatgpt.com"><i class="bi bi-linkedin"></i></a>
+	            </div>
+	          </div>
+	  				   
+	          <div class="col-lg-2 col-6 footer-links">
+	            <h4>센터 메뉴</h4>
+	            <ul>
+	              <li><a href="defect_reports">결함신고</a></li>
+	              <li><a href="defectList">신고내역조회</a></li>
+	              <li><a href="announce">공지사항</a></li>
+	              <li><a href="notice">FAQ</a></li>
+	            </ul>
+	          </div>
 
-          <div class="col-lg-2 col-6 footer-links">
-            <h4>센터 메뉴</h4>
-            <ul>
-              <li><a href="#">결함신고</a></li>
-              <li><a href="#">리콜정보</a></li>
-              <li><a href="#">리콜제도</a></li>
-              <li><a href="#">안전운전</a></li>
-              <li><a href="#">리콜센터</a></li>
-            </ul>
-          </div>
+	          <div class="col-lg-2 col-6 footer-links">
+	            <h4>리콜 센터</h4>
+	            <ul>
+	              <li><a href="recall_list">리콜정보</a></li>
+	              <li><a href="recall_statics_year">연도통계</a></li>
+	              <li><a href="recall_statics_month">달 통계</a></li>
+	              <li><a href="notice_write">질문하기</a></li>
+	            </ul>
+	          </div>
 
-          <div class="col-lg-2 col-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><a href="#">Web Design</a></li>
-              <li><a href="#">Web Development</a></li>
-              <li><a href="#">Product Management</a></li>
-              <li><a href="#">Marketing</a></li>
-              <li><a href="#">Graphic Design</a></li>
-            </ul>
-          </div>
+	          <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+	            <h4>Contact Us</h4>
+	            <p>부산광역시 부산진구 중앙대로 672 2</p>
+	            <p>삼비빌딩</p>
+	            <p>2F, 12F</p>
+	            <p class="mt-4"><strong>Phone:</strong> <span>010-1234-5678</span></p>
+	            <p><strong>Email:</strong> <span>contact@example.com</span></p>
+	          </div>
+	        </div>
+	      </div>
 
-          <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-            <h4>Contact Us</h4>
-            <p>부산광역시 부산진구 중앙대로 672 2</p>
-            <p>삼비빌딩</p>
-            <p>2층, 12층</p>
-            <p class="mt-4"><strong>Phone:</strong> <span>010-7750-8444</span></p>
-            <p><strong>Email:</strong> <span>tjswls0147@naver.com</span></p>
-          </div>
+	      <div class="container copyright text-center mt-4">
+	        <p>© <span>KH 정보교육원</span> <strong class="px-1 sitename">KH리콜안전공단</strong> <span>자동차안전연구원 </span></p>
+	        <div class="credits">
+	          <!-- All the links in the footer should remain intact. -->
+	          <!-- You can delete the links only if you've purchased the pro version. -->
+	          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+	          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+	          Designed by <a href="https://www.naver.com/">team KH리콜안전공단</a>
+	        </div>
+	      </div>
 
-        </div>
-      </div>
-
-      <div class="container copyright text-center mt-4">
-        <p>© <span>KH Company</span> <strong class="px-1 sitename">한국교통안전공단</strong> <span>자동차안전연구원 </span></p>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you've purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-          Designed by <a href="https://www.naver.com/">LeeSeonJinMade</a>
-        </div>
-      </div>
-
-    </footer>
+	    </footer>
 
     <!-- Scroll Top -->
     <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Starter Page - Impact Bootstrap Template</title>
+  <title>차량리콜도우미</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -78,68 +78,65 @@
 
 <body class="starter-page-page">
 
-  <header id="header" class="header fixed-top">
+	<header id="header" class="header fixed-top">
 
-    <div class="topbar d-flex align-items-center">
-      <div class="container d-flex justify-content-center justify-content-md-between">
-        <div class="contact-info d-flex align-items-center">
-          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">contact@example.com</a></i>
-          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 5589 55488 55</span></i>
-        </div>
-        <div class="social-links d-none d-md-flex align-items-center">
-          <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-        </div>
-      </div>
-    </div><!-- End Top Bar -->
+	    <div class="topbar d-flex align-items-center">
+	      <div class="container d-flex justify-content-center justify-content-md-between">
+	        <div class="contact-info d-flex align-items-center">
+	          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">contact@example.com</a></i>
+	          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+051 1544-9970</span></i>
+	        </div>
+	        <div class="social-links d-none d-md-flex align-items-center">
+	          <a href="https://x.com/home" class="twitter"><i class="bi bi-twitter-x"></i></a>
+	          <a href="https://www.facebook.com" class="facebook"><i class="bi bi-facebook"></i></a>
+	          <a href="https://www.instagram.com" class="instagram"><i class="bi bi-instagram"></i></a>
+	          <a href="https://www.chatgpt.com" class="linkedin"><i class="bi bi-linkedin"></i></a>
+	        </div>
+	      </div>
+	    </div><!-- End Top Bar -->
 
-    <div class="branding d-flex align-items-cente">
+	    <div class="branding d-flex align-items-cente">
 
-      <div class="container position-relative d-flex align-items-center justify-content-between">
-        <a href="index.html" class="logo d-flex align-items-center">
-          <!-- Uncomment the line below if you also wish to use an image logo -->
-          <!-- <img src="assets/img/logo.png" alt=""> -->
-          <h1 class="sitename">Impact</h1>
-          <span>.</span>
-        </a>
+	      <div class="container position-relative d-flex align-items-center justify-content-between">
+	        <a href="main" class="logo d-flex align-items-center">
+	          <!-- Uncomment the line below if you also wish to use an image logo -->
+	           <img src="assets/img/hmm.png" alt=""> 
+	          <h1 class="sitename">차량 리콜 도우미</h1>
+	          <span>.</span>
+	        </a>
 
-        <nav id="navmenu" class="navmenu">
-          <ul>
-            <li><a href="#hero">Home<br></a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#team">Team</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
-                <li><a href="#">Dropdown 1</a></li>
-                <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                  <ul>
-                    <li><a href="#">Deep Dropdown 1</a></li>
-                    <li><a href="#">Deep Dropdown 2</a></li>
-                    <li><a href="#">Deep Dropdown 3</a></li>
-                    <li><a href="#">Deep Dropdown 4</a></li>
-                    <li><a href="#">Deep Dropdown 5</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Dropdown 2</a></li>
-                <li><a href="#">Dropdown 3</a></li>
-                <li><a href="#">Dropdown 4</a></li>
-              </ul>
-            </li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-        </nav>
+	        <nav id="navmenu" class="navmenu">
+	          <ul>
+	            <li><a href="recall_list">리콜정보</a></li>
+				<li class="dropdown"><a href="defect_reports"><span>결함신고</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+	              <ul>
+	                <li><a href="defect_reports">결함신고</a></li>
+	                <li><a href="defectList">신고내역조회</a></li>
+	              </ul>
+	            </li>
+				<li class="dropdown"><a href="defect_reports"><span>리콜센터</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+	              <ul>
+	                <li><a href="announce">공지사항</a></li>
+	                <li><a href="notice">FAQ</a></li>
+	              </ul>
+	            </li>
+	            <li><a href="recall_statics_year">리콜통계</a></li>
+				<li class="dropdown"><a href="defect_reports"><span>관리자</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+	              <ul>
+	                <li><a href="defect_details_check">리콜정보검수</a></li>
+	                <li><a href="announce_write">공지사항작성</a></li>
+	              </ul>
+	            </li>
+				
+	          </ul>
+	          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+	        </nav>
 
-      </div>
+	      </div>
 
-    </div>
+	    </div>
 
-  </header>
+	  </header>
 
   <main class="main">
 
@@ -149,7 +146,7 @@
         <div class="container">
           <div class="row d-flex justify-content-center text-center">
             <div class="col-lg-8">
-              <h1>announce_view</h1>
+              <h1>공지사항</h1>
               <p class="mb-0">
 				자동차 리콜센터에서 제공하는 공지사항입니다.
 			  </p>
@@ -160,8 +157,9 @@
       <nav class="breadcrumbs">
         <div class="container">
           <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Starter Page</li>
+			<li><a href="main">차량리콜도우미</a></li>
+            <li><a href="announce">공지사항</a></li>
+            <li class="current">공지사항상세</li>
           </ol>
         </div>
       </nav>
@@ -238,67 +236,65 @@
 
   <footer id="footer" class="footer accent-background">
 
-    <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-5 col-md-12 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">Impact</span>
-          </a>
-          <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
-          <div class="social-links d-flex mt-4">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
+      <div class="container footer-top">
+        <div class="row gy-4">
+          <div class="col-lg-5 col-md-12 footer-about">
+            <a href="main" class="logo d-flex align-items-center">
+              <span class="sitename">차량 리콜 도우미</span>
+            </a>
+            <p>우)445-871 경기도 화성시 송산면 삼존로 200 한국교통안전공단 자동차안전연구원 Tel : 080-357-2500 Fax : 031-355-0027
+              본 홈페이지에 게시된 이메일 주소가 자동 수집되는 것을 거부하며, 이를 위반 시 정보통신망법에 의해 처벌됨을 유념하시기 바랍니다.</p>
+            <div class="social-links d-flex mt-4">
+              <a href="https://x.com/home"><i class="bi bi-twitter-x"></i></a>
+              <a href="https://www.facebook.com"><i class="bi bi-facebook"></i></a>
+              <a href="https://www.instagram.com"><i class="bi bi-instagram"></i></a>
+              <a href="https://www.chatgpt.com"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+  				   
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>센터 메뉴</h4>
+            <ul>
+              <li><a href="defect_reports">결함신고</a></li>
+              <li><a href="defectList">신고내역조회</a></li>
+              <li><a href="announce">공지사항</a></li>
+              <li><a href="notice">FAQ</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>리콜 센터</h4>
+            <ul>
+              <li><a href="recall_list">리콜정보</a></li>
+              <li><a href="recall_statics_year">연도통계</a></li>
+              <li><a href="recall_statics_month">달 통계</a></li>
+              <li><a href="notice_write">질문하기</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+            <h4>Contact Us</h4>
+            <p>부산광역시 부산진구 중앙대로 672 2</p>
+            <p>삼비빌딩</p>
+            <p>2F, 12F</p>
+            <p class="mt-4"><strong>Phone:</strong> <span>010-1234-5678</span></p>
+            <p><strong>Email:</strong> <span>contact@example.com</span></p>
           </div>
         </div>
-
-        <div class="col-lg-2 col-6 footer-links">
-          <h4>Useful Links</h4>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Terms of service</a></li>
-            <li><a href="#">Privacy policy</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-2 col-6 footer-links">
-          <h4>Our Services</h4>
-          <ul>
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">Product Management</a></li>
-            <li><a href="#">Marketing</a></li>
-            <li><a href="#">Graphic Design</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-          <h4>Contact Us</h4>
-          <p>A108 Adam Street</p>
-          <p>New York, NY 535022</p>
-          <p>United States</p>
-          <p class="mt-4"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-          <p><strong>Email:</strong> <span>info@example.com</span></p>
-        </div>
-
       </div>
-    </div>
 
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Impact</strong> <span>All Rights Reserved</span></p>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      <div class="container copyright text-center mt-4">
+        <p>© <span>KH 정보교육원</span> <strong class="px-1 sitename">KH리콜안전공단</strong> <span>자동차안전연구원 </span></p>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you've purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+          Designed by <a href="https://www.naver.com/">team KH리콜안전공단</a>
+        </div>
       </div>
-    </div>
 
-  </footer>
+    </footer>
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

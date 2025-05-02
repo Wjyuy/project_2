@@ -158,6 +158,12 @@
               </ul>
             </li>
             <li><a href="recall_statics_year">리콜통계</a></li>
+			<li class="dropdown"><a href="defect_reports"><span>관리자</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="defect_details_check">리콜정보검수</a></li>
+                <li><a href="announce_write">공지사항작성</a></li>
+              </ul>
+            </li>
 			
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -186,7 +192,7 @@
       <nav class="breadcrumbs">
         <div class="container">
           <ol>
-            <li><a href="index.html">자동차리콜센터</a></li>
+            <li><a href="main">차량리콜도우미</a></li>
             <li class="current">공지사항</li>
           </ol>
         </div>
@@ -201,16 +207,6 @@
 	        <h2 class="title">공지사항</h2>
 			
 			<div class="widgets-container">
-				
-				<form method="get" id="searchForm">
-					<select name="type">
-						<option value=""<c:out value="${pageMaker.cri.type == null ? 'selected':''}"></c:out>>전체</option>
-						<option value="T"<c:out value="${pageMaker.cri.type eq 'T' ? 'selected':''}"></c:out>>제목</option>
-						<option value="C"<c:out value="${pageMaker.cri.type eq 'C' ? 'selected':''}"></c:out>>내용</option>
-					</select>
-					<input type="text" name="keyword" value="${pageMaker.cri.keyword}">
-					<button>Search</button>
-				</form>
 				
 				<!--리콜정보 출력-->
 				<form id="actionForm" action="announce" method="get">
@@ -233,6 +229,15 @@
 				</table>
 			</div>
 			
+			<form method="get" id="searchForm">
+				<select name="type">
+					<option value=""<c:out value="${pageMaker.cri.type == null ? 'selected':''}"></c:out>>전체</option>
+					<option value="T"<c:out value="${pageMaker.cri.type eq 'T' ? 'selected':''}"></c:out>>제목</option>
+					<option value="C"<c:out value="${pageMaker.cri.type eq 'C' ? 'selected':''}"></c:out>>내용</option>
+				</select>
+				<input type="text" name="keyword" value="${pageMaker.cri.keyword}">
+				<button>Search</button>
+			</form>
 
 			<!-- Blog Pagination Section -->
 			<section id="blog-pagination" class="blog-pagination section">
@@ -275,8 +280,6 @@
 
 	    </section><!-- /Starter Section Section -->
 
-		<a href="announce_write">글작성</a>
-
     </section><!-- /Starter Section Section -->
 
   </main>
@@ -285,8 +288,8 @@
     <div class="container footer-top">
       <div class="row gy-4">
         <div class="col-lg-5 col-md-12 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">자동차리콜센터</span>
+          <a href="main" class="logo d-flex align-items-center">
+            <span class="sitename">차량 리콜 도우미</span>
           </a>
           <p>우)445-871 경기도 화성시 송산면 삼존로 200 한국교통안전공단 자동차안전연구원 Tel : 080-357-2500 Fax : 031-355-0027
             본 홈페이지에 게시된 이메일 주소가 자동 수집되는 것을 거부하며, 이를 위반 시 정보통신망법에 의해 처벌됨을 유념하시기 바랍니다.</p>
@@ -297,26 +300,24 @@
             <a href="https://www.chatgpt.com"><i class="bi bi-linkedin"></i></a>
           </div>
         </div>
-
+				   
         <div class="col-lg-2 col-6 footer-links">
           <h4>센터 메뉴</h4>
           <ul>
-            <li><a href="#">결함신고</a></li>
-            <li><a href="#">리콜정보</a></li>
-            <li><a href="#">리콜제도</a></li>
-            <li><a href="#">안전운전</a></li>
-            <li><a href="#">리콜센터</a></li>
+            <li><a href="defect_reports">결함신고</a></li>
+            <li><a href="defectList">신고내역조회</a></li>
+            <li><a href="announce">공지사항</a></li>
+            <li><a href="notice">FAQ</a></li>
           </ul>
         </div>
 
         <div class="col-lg-2 col-6 footer-links">
-          <h4>Our Services</h4>
+          <h4>리콜 센터</h4>
           <ul>
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">Product Management</a></li>
-            <li><a href="#">Marketing</a></li>
-            <li><a href="#">Graphic Design</a></li>
+            <li><a href="recall_list">리콜정보</a></li>
+            <li><a href="recall_statics_year">연도통계</a></li>
+            <li><a href="recall_statics_month">달 통계</a></li>
+            <li><a href="notice_write">질문하기</a></li>
           </ul>
         </div>
 
@@ -325,20 +326,20 @@
           <p>부산광역시 부산진구 중앙대로 672 2</p>
           <p>삼비빌딩</p>
           <p>2F, 12F</p>
-          <p class="mt-4"><strong>Phone:</strong> <span>010-7750-8444</span></p>
-          <p><strong>Email:</strong> <span>tjswls0147@naver.com</span></p>
+          <p class="mt-4"><strong>Phone:</strong> <span>010-1234-5678</span></p>
+          <p><strong>Email:</strong> <span>contact@example.com</span></p>
         </div>
       </div>
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>© <span>KH Company</span> <strong class="px-1 sitename">한국교통안전공단</strong> <span>자동차안전연구원 </span></p>
+      <p>© <span>KH 정보교육원</span> <strong class="px-1 sitename">KH리콜안전공단</strong> <span>자동차안전연구원 </span></p>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you've purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://www.naver.com/">LeeSeonJinMade</a>
+        Designed by <a href="https://www.naver.com/">team KH리콜안전공단</a>
       </div>
     </div>
 

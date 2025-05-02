@@ -149,10 +149,11 @@
 
 - **Front-End** (`전체 jsp 단`)
   - ✅ header 테스트용으로 완료 -> announce 에 있음, 📌 TODO : 다른페이지들에도 적용할예정 
-  - 📌 TODO : footer 링크걸기 
+  - ✅ footer 링크걸기 완료!
    전국 리콜 현황 링크 : recall_list 
-   id=aaa a href=#aaa 걸면 화면 움직이는거 가능 (넣을지 말지 고민)
-   announce_write 가는 버튼(관리자용)
+   📌id=aaa a href=#aaa 걸면 화면 움직이는거 가능 (넣을지 말지 고민)
+   ✅announce_write 가는 버튼(관리자용)
+   =>프론트엔드 적용 페이지들은 아래 정리 ! 
 
 - **결함신고 페이지** (`defect_report.jsp,defect_details_check.jsp`)
   - ✅ 비밀번호 눈아이콘(적은 입력값 볼수있도록)
@@ -169,12 +170,13 @@
    관리자 페이지로 가는 defect_report _ok 필요하면 추후 경로수정 가능
 
 - **신고내역조회 페이지** (`defectList.jsp`)
-  - 📌Todo : 리스트에서 클릭시 이동할 게시글(defect_view) 만들 예정
+  - 📌Todo : 리스트에서 클릭시 이동할 게시글(defect_view) 제작중
+  - 📌Todo : 비밀번호 입력 후 맞을 시 수정 기능 추가중
 
 - **게시판 동작 프론트단 제작** (`announce.jsp,notice.jsp,announce_view.jsp`)
   - ✅ announce , announce_write 프론트 마무리
   - ✅ announce , announce_write 백앤드 구현 (insert, list, 페이징, 서치까지 완료)
-  - ✅ announce_view 추가 구현 ( 내용 나오고, 다음페이지 이전페이지 )
+  - ✅ announce_view 추가 구현 ( 내용 나오고, 다음페이지 이전페이지 , 프론트 디자인 완료 )
   
 #### 🛠️ 추가 및 수정된 파일 목록
 
@@ -217,11 +219,57 @@
 - `DefactServiceImpl.java` (✏️)
 - `defect.xml` (✏️)
 
+------------------------------------
+
+- **Front-End 적용 페이지**
+footer/header/ol li 링크 적용 완료
+
+- `announce.jsp` (✏️)
+- `notice.jsp` (✏️)
+- `announce_view.jsp` (✏️)
+- `announce_write.jsp` (✏️)
+- `main.jsp` (디자인 필요✏️)
+- `notice_write.jsp` (✏️)
+- `recall_list.jsp` (✏️)
+- `recall_statics_year.jsp` (✏️)
+- `recall_statics_month.jsp` (✏️)
+
+- `defect_reports.jsp` (✏️)
+- `defect_details_check.jsp` (✏️)
+- `defect_reports_ok.jsp` (✏️)
+
+
 #### 📌 내일 예정
 
+- 메인 만들기
+- 취합
 - 시간 남으면 소스트리 공부
 - 🐞디버그 픽스
 - 📚시연영상 촬영
 - 📝서류 작업
+
+</details>
+
+<details>
+
+
+<summary>📅 2025/05/02 작업 내용</summary>
+
+<br>
+
+- **마무리 작업** 
+  -  기능분류, 캡쳐, 깃허브 작성
+  -  메인단 디자인
+  -  신고내역조회 페이지 취합
+  - 🐞디버그 픽스
+  - 📚시연영상 촬영
+  - 📝서류 작업
+
+✅
+
+#### 🛠️ 추가 및 수정된 파일 목록
+
+- `` (report_month추가✏️)
+- `.jsp` (➕)
 
 </details>
