@@ -125,7 +125,7 @@ made by. team_KH리콜안전공단
 
 ### 결함신고
 <br>
-![통계](./images/결함신고10.png)
+![결함신고](./images/결함신고10.png)
 
 `defect_reports.jsp`
 - 좌측 상단에 홈페이지 명(로고)출력
@@ -141,7 +141,7 @@ made by. team_KH리콜안전공단
  
 ### 결함신고 완료
 <br>
-![통계](./images/신청완료11.png)
+![결함신고](./images/신청완료11.png)
 `defect_reports_ok.jsp`
 - 좌측 상단에 홈페이지 명(로고)출력
 - 상단에 목록 구현
@@ -155,7 +155,7 @@ made by. team_KH리콜안전공단
 <br>
 ### 리콜정보검수
 <br>
-![통계](./images/리콜 정보 검수12.png)
+![결함신고](./images/리콜 정보 검수12.png)
 
 'defect_details_check.jsp'
 - 좌측 상단에 홈페이지 명(로고)출력
