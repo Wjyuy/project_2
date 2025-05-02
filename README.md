@@ -269,7 +269,34 @@ footer/header/ol li 링크 적용 완료
 
 #### 🛠️ 추가 및 수정된 파일 목록
 
-- `` (report_month추가✏️)
-- `.jsp` (➕)
+🐞✅ nav바 버그 확인 => 페이지들 전체 링크 수정  
+- `announce.jsp` (✏️)
+- `notice.jsp` (✏️)
+- `announce_view.jsp` (✏️)
+- `announce_write.jsp` (✏️)
+- `main.jsp` (디자인 필요✏️)
+- `notice_write.jsp` (✏️)
+- `recall_list.jsp` (✏️)
+- `recall_statics_year.jsp` (✏️)
+- `recall_statics_month.jsp` (✏️)
+- `defect_reports.jsp` (li링크 수정✏️)
+- `defect_details_check.jsp` (✏️)
+- `defect_reports_ok.jsp` (확인완료 버튼 수정✏️)
+
+
+< 재수정 >
+
+- `defect_reports` 문구수정
+- `recall_statics_year.jsp` 문구수정
+- `recall_statics_month.jsp`  문구수정
+- `notice_write.jsp` 버튼수정
+- `main.jsp` 제작완료
+- `AnnounceController` (메인에 faq 추가)
+
+<이미지 업로드>
+image1~2
+
+< 클라이언트 폴더>
+image3 ~ 10
 
 </details>

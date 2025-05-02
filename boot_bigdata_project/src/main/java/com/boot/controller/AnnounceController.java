@@ -14,6 +14,7 @@ import com.boot.dto.BoardDTO;
 import com.boot.dto.CommentDTO;
 import com.boot.dto.Criteria;
 import com.boot.dto.DefectListDTO;
+import com.boot.dto.FaqsDTO;
 import com.boot.dto.PageDTO;
 import com.boot.service.FaqannService;
 import com.boot.service.PageService;
@@ -44,8 +45,13 @@ public class AnnounceController {
 	}
 	
 	@RequestMapping("/main")
-	public String main(){
+	public String main(Criteria cri,Model model){
 		log.info("@# main");
+		ArrayList<FaqsDTO>noticeList = service.noticelistWithPaging(cri);
+		int total = service.noticegetTotalCount(cri);
+		log.info("@# total=>"+total);
+		
+		model.addAttribute("noticeList", noticeList);
 		return "main";
 	}
 	@RequestMapping("/announce_write")

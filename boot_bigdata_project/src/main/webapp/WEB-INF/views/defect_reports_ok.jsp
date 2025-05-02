@@ -219,20 +219,20 @@
 	       <nav id="navmenu" class="navmenu">
 	         <ul>
 	           <li><a href="recall_list">리콜정보</a></li>
-			<li class="dropdown"><a href="defect_reports"><span>결함신고</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+			<li class="dropdown"><a href="#"><span>결함신고</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
 	             <ul>
 	               <li><a href="defect_reports">결함신고</a></li>
 	               <li><a href="defectList">신고내역조회</a></li>
 	             </ul>
 	           </li>
-			<li class="dropdown"><a href="defect_reports"><span>리콜센터</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+			<li class="dropdown"><a href="#"><span>리콜센터</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
 	             <ul>
 	               <li><a href="announce">공지사항</a></li>
 	               <li><a href="notice">FAQ</a></li>
 	             </ul>
 	           </li>
 	           <li><a href="recall_statics_year">리콜통계</a></li>
-			<li class="dropdown"><a href="defect_reports"><span>관리자</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+			<li class="dropdown"><a href="#"><span>관리자</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
 	             <ul>
 	               <li><a href="defect_details_check">리콜정보검수</a></li>
 	               <li><a href="announce_write">공지사항작성</a></li>
@@ -265,9 +265,10 @@
         <nav class="breadcrumbs">
           <div class="container">
             <ol>
-               <li><a href="main">차량리콜도우미</a></li>
-               <li><a href="defect_reports">정보 입력</a></li>
-              <li class="current">정보 입력 확인</li>
+				<li><a href="main">차량리콜도우미</a></li>
+	            <li><a href="defectList">신고내역조회</a></li>
+	            <li><a href="defect_reports">결함신고</li></a>
+	            <li class="current">정보 입력 확인</li>
             </ol>
           </div>
         </nav>
@@ -281,7 +282,7 @@
           <h2 class="title">신청 완료</h2>
   		
   		<div class="widgets-container" style="text-align: center;">
-  		    <form action="defect_list" method="post" class="uk-form-stacked">
+  		    <form action="defectList" method="post" class="uk-form-stacked">
   	
   				<hr margin:auto >
   				
@@ -308,7 +309,7 @@
   							  결함신고 리스트로 이동
   							</button>
 							&nbsp;&nbsp;&nbsp;&nbsp;
-						  <button type="button" onclick="location.href='defect_reports'">
+						  <button type="button" onclick="location.href='main'">
 						    확인 완료
 						  </button>
   						</div>		

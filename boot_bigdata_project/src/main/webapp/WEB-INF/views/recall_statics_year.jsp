@@ -196,20 +196,20 @@
 	        <nav id="navmenu" class="navmenu">
 	          <ul>
 	            <li><a href="recall_list">리콜정보</a></li>
-				<li class="dropdown"><a href="defect_reports"><span>결함신고</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+				<li class="dropdown"><a href="#"><span>결함신고</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
 	              <ul>
 	                <li><a href="defect_reports">결함신고</a></li>
 	                <li><a href="defectList">신고내역조회</a></li>
 	              </ul>
 	            </li>
-				<li class="dropdown"><a href="defect_reports"><span>리콜센터</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+				<li class="dropdown"><a href="#"><span>리콜센터</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
 	              <ul>
 	                <li><a href="announce">공지사항</a></li>
 	                <li><a href="notice">FAQ</a></li>
 	              </ul>
 	            </li>
 	            <li><a href="recall_statics_year">리콜통계</a></li>
-				<li class="dropdown"><a href="defect_reports"><span>관리자</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+				<li class="dropdown"><a href="#"><span>관리자</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
 	              <ul>
 	                <li><a href="defect_details_check">리콜정보검수</a></li>
 	                <li><a href="announce_write">공지사항작성</a></li>
@@ -237,7 +237,7 @@
 		    <div class="row gy-5 justify-content-between">
 		      <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
 		        <h2><span>리콜 통계</span><span class="accent"> 자료실</span></h2>
-		        <p>Sed autem laudantium dolores. Voluptatem itaque ea consequatur eveniet. Eum quas beatae cumque eum quaerat.</p>
+		        <p>시각화된 그래프로 한눈에 리콜 통계를 확인하세요! 원하는 기간을 설정할 수 있습니다.</p>
 		      </div>
 		      <div class="col-lg-5 order-1 order-lg-2">
 		        <img src="assets/img/hero-img.svg" class="img-fluid" alt="">

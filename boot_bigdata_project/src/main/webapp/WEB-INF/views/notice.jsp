@@ -130,20 +130,20 @@ span.active {
 	        <nav id="navmenu" class="navmenu">
 	          <ul>
 	            <li><a href="recall_list">리콜정보</a></li>
-				<li class="dropdown"><a href="defect_reports"><span>결함신고</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+				<li class="dropdown"><a href="#"><span>결함신고</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
 	              <ul>
 	                <li><a href="defect_reports">결함신고</a></li>
 	                <li><a href="defectList">신고내역조회</a></li>
 	              </ul>
 	            </li>
-				<li class="dropdown"><a href="defect_reports"><span>리콜센터</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+				<li class="dropdown"><a href="#"><span>리콜센터</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
 	              <ul>
 	                <li><a href="announce">공지사항</a></li>
 	                <li><a href="notice">FAQ</a></li>
 	              </ul>
 	            </li>
 	            <li><a href="recall_statics_year">리콜통계</a></li>
-				<li class="dropdown"><a href="defect_reports"><span>관리자</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+				<li class="dropdown"><a href="#"><span>관리자</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
 	              <ul>
 	                <li><a href="defect_details_check">리콜정보검수</a></li>
 	                <li><a href="announce_write">공지사항작성</a></li>
